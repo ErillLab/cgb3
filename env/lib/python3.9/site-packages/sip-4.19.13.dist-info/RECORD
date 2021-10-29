@@ -1,9 +1,0 @@
-sipconfig.py,sha256=Z5WFf2jrQLc2zDxljuvD2_apOgP6t1o3tG_or7ZB9dc,99323
-sipdistutils.py,sha256=JOcaguz5cK7h1gm7t-q4j-Xrke9Yknb137bdOIKX_Xk,6041
-../../../include/python3.9/sip.h,sha256=w8Ow6qQK3RCykpenVTVf8TcfjkeqZbCnqS5KzHrzTaU,67001
-../../../bin/sip,sha256=3txv9zd3XMrBL1tbRIKXhVBoFavYS4_u40yFja5Egzk,435672
-sip.pyi,sha256=Yb_KWhPusgx_KCvfnTmfqSFQm24j1_EWnqE8kJDR3jU,2801
-sip.so,sha256=-ZEuEtGshD_qMZtfqOmI9WKGPKNnjpHFpRExF9r36TM,144592
-sip-4.19.13.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
-sip-4.19.13.dist-info/METADATA,sha256=GxE9QJ9Xy4eiHoU7fBKLtZOH5sKtDCYNQf-1UBn9bcw,49
-sip-4.19.13.dist-info/RECORD,,
