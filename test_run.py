@@ -1,2 +1,2 @@
-import cgb
-cgb.go('test_input.json')
+import cgb3
+cgb3.go('test_input.json')

@@ -35,8 +35,36 @@ def rgb2hex(red, green, blue):
     """
     
     R=int(round(red*255))
-    B=int(round(blue*255))
     G=int(round(green*255))
+    B=int(round(blue*255))
+
+    return '#{0:02x}{1:02x}{2:02x}'.format(R,G,B)
+
+def rgb2hex_colorblind(p_notregulation, p_regulation, p_absence):
+    """Converts the given rgb values to hexadecimal color code.
+
+    Assumes that rgb values are positive and sum to 1.
+    
+    Changes the colors to be colorblind compatible
+    """
+    
+    #Not regulation, regulation, absence
+    #Yellow, regulation
+    #Blue, no regulation
+    
+    #R=int(round(red*255))
+    #G=int(round(green*255))
+    #B=int(round(blue*255))
+    
+    #R goes to blue (not regulation)
+    R = int(p_regulation * 243 + 12)
+    #G goes to yellow (regulation)
+    G = int(p_regulation * 71 + 123)
+    #B goes to white
+    B = int(p_notregulation * 210 + 10)
+
+    if (p_absence == 1):
+        return '#FFFFFF'
 
     return '#{0:02x}{1:02x}{2:02x}'.format(R,G,B)
 
@@ -50,7 +78,7 @@ def filter_and_sort_orthologous_grps(orthologous_groups, min_size=2):
     return orthos
 
 
-def heatmap_view(tree, orthologous_groups, save_dir):
+def heatmap_view(tree, orthologous_groups, save_dir, user_input):
     """Generates a heatmap of regulation states in all species."""
     light_tree = copy.deepcopy(tree)  # Tree copy for the light heatmap
     # Heat map settings
@@ -90,8 +118,14 @@ def heatmap_view(tree, orthologous_groups, save_dir):
                 p_absence = 1
 
             # Color of the rectangle is based on probabilities
-            rect_face_bgcolor = rgb2hex(
-                p_notregulation, p_regulation, p_absence)
+            if user_input.colorblind_compatibility:
+                rect_face_bgcolor = rgb2hex_colorblind(
+                    p_notregulation, p_regulation, p_absence)
+            
+            else:
+                rect_face_bgcolor = rgb2hex(
+                    p_notregulation, p_regulation, p_absence)
+            
             rect_face_text = ('%s [%d]' % (gene.locus_tag, gene.operon.operon_id)
                               if gene else '')
             rect_face_label = {'text': rect_face_text,
@@ -286,7 +320,7 @@ def all_plots(phylo, orthologous_groups, genomes, save_dir, user_input):
     # Heat map
     if user_input.heatmap_plot:
         heatmap_view(biopython_to_ete3(phylo.tree), orthologous_groups,
-                     save_dir)
+                     save_dir, user_input)
 
     # Motif phylogeny plot
     if user_input.motif_plot:

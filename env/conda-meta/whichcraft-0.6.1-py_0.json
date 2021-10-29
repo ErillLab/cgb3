@@ -1,0 +1,107 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/abigail/miniconda2/pkgs/whichcraft-0.6.1-py_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/whichcraft-0.6.1.dist-info/AUTHORS.rst",
+    "lib/python3.9/site-packages/whichcraft-0.6.1.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/whichcraft-0.6.1.dist-info/LICENSE",
+    "lib/python3.9/site-packages/whichcraft-0.6.1.dist-info/METADATA",
+    "lib/python3.9/site-packages/whichcraft-0.6.1.dist-info/RECORD",
+    "lib/python3.9/site-packages/whichcraft-0.6.1.dist-info/WHEEL",
+    "lib/python3.9/site-packages/whichcraft-0.6.1.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/whichcraft.py",
+    "lib/python3.9/site-packages/__pycache__/whichcraft.cpython-39.pyc"
+  ],
+  "fn": "whichcraft-0.6.1-py_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/abigail/miniconda2/pkgs/whichcraft-0.6.1-py_0",
+    "type": 1
+  },
+  "md5": "08069b1a0dd029c8d5a8a935a7c71917",
+  "name": "whichcraft",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/abigail/miniconda2/pkgs/whichcraft-0.6.1-py_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/whichcraft-0.6.1.dist-info/AUTHORS.rst",
+        "path_type": "hardlink",
+        "sha256": "6345cf630a10850b7d5dba6b20c813cd5f2e82550a16a58460fdd467ebefa62e",
+        "sha256_in_prefix": "6345cf630a10850b7d5dba6b20c813cd5f2e82550a16a58460fdd467ebefa62e",
+        "size_in_bytes": 258
+      },
+      {
+        "_path": "site-packages/whichcraft-0.6.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/whichcraft-0.6.1.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "9fbd51a4ad088b99011438956d36b3b9cd3098aa9d6b326675637804960b60df",
+        "sha256_in_prefix": "9fbd51a4ad088b99011438956d36b3b9cd3098aa9d6b326675637804960b60df",
+        "size_in_bytes": 1483
+      },
+      {
+        "_path": "site-packages/whichcraft-0.6.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "c71be5684593b2622bd542c2d8daf6e3d2361f07b6f5d9cf79594096e0f5f6b9",
+        "sha256_in_prefix": "c71be5684593b2622bd542c2d8daf6e3d2361f07b6f5d9cf79594096e0f5f6b9",
+        "size_in_bytes": 4374
+      },
+      {
+        "_path": "site-packages/whichcraft-0.6.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "c20d9011308f2ca3c90523fd24459bd00bf7f89ca022ec3ac39a74374c64646c",
+        "sha256_in_prefix": "c20d9011308f2ca3c90523fd24459bd00bf7f89ca022ec3ac39a74374c64646c",
+        "size_in_bytes": 682
+      },
+      {
+        "_path": "site-packages/whichcraft-0.6.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "f3335865bc10497a01f487d73a33df78dc2f02c00b0237df824dbb16abc259ba",
+        "sha256_in_prefix": "f3335865bc10497a01f487d73a33df78dc2f02c00b0237df824dbb16abc259ba",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/whichcraft-0.6.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "c0f9b2a4fc99f88130099dff440e0de80b43e6a342af2b6172d35962b98036b1",
+        "sha256_in_prefix": "c0f9b2a4fc99f88130099dff440e0de80b43e6a342af2b6172d35962b98036b1",
+        "size_in_bytes": 11
+      },
+      {
+        "_path": "site-packages/whichcraft.py",
+        "path_type": "hardlink",
+        "sha256": "b214501d26bad51830611eb3b0c307b2dba6a15b9626da2fbeb279cfe3a23af6",
+        "sha256_in_prefix": "b214501d26bad51830611eb3b0c307b2dba6a15b9626da2fbeb279cfe3a23af6",
+        "size_in_bytes": 2881
+      },
+      {
+        "_path": "lib/python3.9/site-packages/__pycache__/whichcraft.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "358fc4340c3dcd78f3fb7d1068cbc408f7ac1b3db67a11274ffc1cb2764dd001",
+  "size": 8286,
+  "subdir": "noarch",
+  "timestamp": 1567861261892,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/whichcraft-0.6.1-py_0.tar.bz2",
+  "version": "0.6.1"
+}

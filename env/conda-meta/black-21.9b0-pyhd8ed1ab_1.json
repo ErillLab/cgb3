@@ -1,0 +1,673 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "click >=7.1.2",
+    "dataclasses >=0.6",
+    "mypy_extensions >=0.4.3",
+    "pathspec >=0.9,<1",
+    "platformdirs >=2",
+    "python >=3.6",
+    "regex >=2020.1.8",
+    "tomli >=0.2.6,<2.0.0",
+    "typed-ast >=1.4.2",
+    "typing_extensions >=3.10,!=3.10.0.1"
+  ],
+  "extracted_package_dir": "/home/abigail/miniconda2/pkgs/black-21.9b0-pyhd8ed1ab_1",
+  "features": "",
+  "files": [
+    "bin/blackd",
+    "lib/python3.9/site-packages/_black_version.py",
+    "lib/python3.9/site-packages/black-21.9b0.dist-info/AUTHORS.md",
+    "lib/python3.9/site-packages/black-21.9b0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/black-21.9b0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/black-21.9b0.dist-info/METADATA",
+    "lib/python3.9/site-packages/black-21.9b0.dist-info/RECORD",
+    "lib/python3.9/site-packages/black-21.9b0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/black-21.9b0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/black-21.9b0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/black-21.9b0.dist-info/entry_points.txt",
+    "lib/python3.9/site-packages/black-21.9b0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/black/__init__.py",
+    "lib/python3.9/site-packages/black/__main__.py",
+    "lib/python3.9/site-packages/black/brackets.py",
+    "lib/python3.9/site-packages/black/cache.py",
+    "lib/python3.9/site-packages/black/comments.py",
+    "lib/python3.9/site-packages/black/concurrency.py",
+    "lib/python3.9/site-packages/black/const.py",
+    "lib/python3.9/site-packages/black/debug.py",
+    "lib/python3.9/site-packages/black/files.py",
+    "lib/python3.9/site-packages/black/handle_ipynb_magics.py",
+    "lib/python3.9/site-packages/black/linegen.py",
+    "lib/python3.9/site-packages/black/lines.py",
+    "lib/python3.9/site-packages/black/mode.py",
+    "lib/python3.9/site-packages/black/nodes.py",
+    "lib/python3.9/site-packages/black/numerics.py",
+    "lib/python3.9/site-packages/black/output.py",
+    "lib/python3.9/site-packages/black/parsing.py",
+    "lib/python3.9/site-packages/black/py.typed",
+    "lib/python3.9/site-packages/black/report.py",
+    "lib/python3.9/site-packages/black/rusty.py",
+    "lib/python3.9/site-packages/black/strings.py",
+    "lib/python3.9/site-packages/black/trans.py",
+    "lib/python3.9/site-packages/black_primer/__init__.py",
+    "lib/python3.9/site-packages/black_primer/cli.py",
+    "lib/python3.9/site-packages/black_primer/lib.py",
+    "lib/python3.9/site-packages/black_primer/primer.json",
+    "lib/python3.9/site-packages/blackd/__init__.py",
+    "lib/python3.9/site-packages/blib2to3/Grammar.txt",
+    "lib/python3.9/site-packages/blib2to3/PatternGrammar.txt",
+    "lib/python3.9/site-packages/blib2to3/__init__.py",
+    "lib/python3.9/site-packages/blib2to3/pgen2/__init__.py",
+    "lib/python3.9/site-packages/blib2to3/pgen2/conv.py",
+    "lib/python3.9/site-packages/blib2to3/pgen2/driver.py",
+    "lib/python3.9/site-packages/blib2to3/pgen2/grammar.py",
+    "lib/python3.9/site-packages/blib2to3/pgen2/literals.py",
+    "lib/python3.9/site-packages/blib2to3/pgen2/parse.py",
+    "lib/python3.9/site-packages/blib2to3/pgen2/pgen.py",
+    "lib/python3.9/site-packages/blib2to3/pgen2/token.py",
+    "lib/python3.9/site-packages/blib2to3/pgen2/tokenize.py",
+    "lib/python3.9/site-packages/blib2to3/pygram.py",
+    "lib/python3.9/site-packages/blib2to3/pytree.py",
+    "lib/python3.9/site-packages/__pycache__/_black_version.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/__main__.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/brackets.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/cache.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/comments.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/concurrency.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/const.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/debug.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/files.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/handle_ipynb_magics.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/linegen.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/lines.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/mode.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/nodes.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/numerics.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/output.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/parsing.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/report.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/rusty.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/strings.cpython-39.pyc",
+    "lib/python3.9/site-packages/black/__pycache__/trans.cpython-39.pyc",
+    "lib/python3.9/site-packages/black_primer/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/black_primer/__pycache__/cli.cpython-39.pyc",
+    "lib/python3.9/site-packages/black_primer/__pycache__/lib.cpython-39.pyc",
+    "lib/python3.9/site-packages/blackd/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/blib2to3/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/conv.cpython-39.pyc",
+    "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/driver.cpython-39.pyc",
+    "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/grammar.cpython-39.pyc",
+    "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/literals.cpython-39.pyc",
+    "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/parse.cpython-39.pyc",
+    "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/pgen.cpython-39.pyc",
+    "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/token.cpython-39.pyc",
+    "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/tokenize.cpython-39.pyc",
+    "lib/python3.9/site-packages/blib2to3/__pycache__/pygram.cpython-39.pyc",
+    "lib/python3.9/site-packages/blib2to3/__pycache__/pytree.cpython-39.pyc",
+    "bin/black",
+    "bin/black-primer"
+  ],
+  "fn": "black-21.9b0-pyhd8ed1ab_1.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/abigail/miniconda2/pkgs/black-21.9b0-pyhd8ed1ab_1",
+    "type": 1
+  },
+  "md5": "e5c67c8b879d4abcee559838b1920fba",
+  "name": "black",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/abigail/miniconda2/pkgs/black-21.9b0-pyhd8ed1ab_1.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "python-scripts/blackd",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/black-recipe_1634678055338/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "3b7e21fbeca0ca72aef7533adacfa175c7d3787b2b5979fcc5123f4aefaf31dc",
+        "sha256_in_prefix": "10dce9c2d5831c623aef30344fc23821e5fb9bb8822d193a91e37bfa23043ee9",
+        "size_in_bytes": 504
+      },
+      {
+        "_path": "site-packages/_black_version.py",
+        "path_type": "hardlink",
+        "sha256": "c6efb06a0e5ca93fd2decd0c488fca9a94960fbdd5d5010e73c0e8e23681a31b",
+        "sha256_in_prefix": "c6efb06a0e5ca93fd2decd0c488fca9a94960fbdd5d5010e73c0e8e23681a31b",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "site-packages/black-21.9b0.dist-info/AUTHORS.md",
+        "path_type": "hardlink",
+        "sha256": "42414bcf71b21bd14eb31cc24ace5d17244ef157cd678328a0a490b4afad2205",
+        "sha256_in_prefix": "42414bcf71b21bd14eb31cc24ace5d17244ef157cd678328a0a490b4afad2205",
+        "size_in_bytes": 7699
+      },
+      {
+        "_path": "site-packages/black-21.9b0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/black-21.9b0.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "9c0428f0c3b4779850cf5bd96e11aaa8afc72d4a86d4a36223d7aba2e58d6e00",
+        "sha256_in_prefix": "9c0428f0c3b4779850cf5bd96e11aaa8afc72d4a86d4a36223d7aba2e58d6e00",
+        "size_in_bytes": 1080
+      },
+      {
+        "_path": "site-packages/black-21.9b0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "0bcfda5647ef83809ae762ec749b7883348111141bb6341e92cee2c93c52c58a",
+        "sha256_in_prefix": "0bcfda5647ef83809ae762ec749b7883348111141bb6341e92cee2c93c52c58a",
+        "size_in_bytes": 36711
+      },
+      {
+        "_path": "site-packages/black-21.9b0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "a9dda1d30b5977ed842c208a506695a4d7ef7513e6c755035d547ac7786bf140",
+        "sha256_in_prefix": "a9dda1d30b5977ed842c208a506695a4d7ef7513e6c755035d547ac7786bf140",
+        "size_in_bytes": 6068
+      },
+      {
+        "_path": "site-packages/black-21.9b0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/black-21.9b0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "7b0c04b9e8a8d42d977874ef4f5ee7f1d6542603afc82582b7459534b0a53fda",
+        "sha256_in_prefix": "7b0c04b9e8a8d42d977874ef4f5ee7f1d6542603afc82582b7459534b0a53fda",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "site-packages/black-21.9b0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "ce75ec534f225b366cf369550136c46d44456e5f00758a59835062b7ae03b883",
+        "sha256_in_prefix": "ce75ec534f225b366cf369550136c46d44456e5f00758a59835062b7ae03b883",
+        "size_in_bytes": 108
+      },
+      {
+        "_path": "site-packages/black-21.9b0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "60bad5f73aa5aca3690835a411ead8195c1094dab421be20f4b1e019c6aa070c",
+        "sha256_in_prefix": "60bad5f73aa5aca3690835a411ead8195c1094dab421be20f4b1e019c6aa070c",
+        "size_in_bytes": 116
+      },
+      {
+        "_path": "site-packages/black-21.9b0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "8c691803fd37641cc93ac7c1ed89f2b30442011c576517026f3737a6e80ac1ec",
+        "sha256_in_prefix": "8c691803fd37641cc93ac7c1ed89f2b30442011c576517026f3737a6e80ac1ec",
+        "size_in_bytes": 50
+      },
+      {
+        "_path": "site-packages/black/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "db554ded65d7f530368f60e8dd526fd5d476268f7b0ccc139735c373e29695d9",
+        "sha256_in_prefix": "db554ded65d7f530368f60e8dd526fd5d476268f7b0ccc139735c373e29695d9",
+        "size_in_bytes": 41568
+      },
+      {
+        "_path": "site-packages/black/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "9a881e038a3dcede30fae7cabda42348486d4a042470c54b2bd0a1bdd079c07f",
+        "sha256_in_prefix": "9a881e038a3dcede30fae7cabda42348486d4a042470c54b2bd0a1bdd079c07f",
+        "size_in_bytes": 47
+      },
+      {
+        "_path": "site-packages/black/brackets.py",
+        "path_type": "hardlink",
+        "sha256": "13b2efe8880f51d17c929352fe2ac994267395f365c21356789536cbb0b4db02",
+        "sha256_in_prefix": "13b2efe8880f51d17c929352fe2ac994267395f365c21356789536cbb0b4db02",
+        "size_in_bytes": 10760
+      },
+      {
+        "_path": "site-packages/black/cache.py",
+        "path_type": "hardlink",
+        "sha256": "9f00944e7f537aa41e19ff60237eb9e720dc574d2d99e567581eb7be7d34442b",
+        "sha256_in_prefix": "9f00944e7f537aa41e19ff60237eb9e720dc574d2d99e567581eb7be7d34442b",
+        "size_in_bytes": 2330
+      },
+      {
+        "_path": "site-packages/black/comments.py",
+        "path_type": "hardlink",
+        "sha256": "870fa8ad51ef179861e68786dc36631f0311d03ed94266301acd7aa269c58dfa",
+        "sha256_in_prefix": "870fa8ad51ef179861e68786dc36631f0311d03ed94266301acd7aa269c58dfa",
+        "size_in_bytes": 10061
+      },
+      {
+        "_path": "site-packages/black/concurrency.py",
+        "path_type": "hardlink",
+        "sha256": "aa30d1f42b62e3f720d9e6b806cba1a2223461dc872cd452e331e73845bfceda",
+        "sha256_in_prefix": "aa30d1f42b62e3f720d9e6b806cba1a2223461dc872cd452e331e73845bfceda",
+        "size_in_bytes": 1676
+      },
+      {
+        "_path": "site-packages/black/const.py",
+        "path_type": "hardlink",
+        "sha256": "e634151e30663aa45a8bb7c385e23ed7a26bbaf238363ebfef205ae860873283",
+        "sha256_in_prefix": "e634151e30663aa45a8bb7c385e23ed7a26bbaf238363ebfef205ae860873283",
+        "size_in_bytes": 249
+      },
+      {
+        "_path": "site-packages/black/debug.py",
+        "path_type": "hardlink",
+        "sha256": "05b945f4bf3c84d19bb95a3e107e92cc7a398e005b160587c8b2f5e338653b76",
+        "sha256_in_prefix": "05b945f4bf3c84d19bb95a3e107e92cc7a398e005b160587c8b2f5e338653b76",
+        "size_in_bytes": 1595
+      },
+      {
+        "_path": "site-packages/black/files.py",
+        "path_type": "hardlink",
+        "sha256": "124de1e1306a599ad6539a165075f36fce829663d9f7fc991812810da96835f8",
+        "sha256_in_prefix": "124de1e1306a599ad6539a165075f36fce829663d9f7fc991812810da96835f8",
+        "size_in_bytes": 8420
+      },
+      {
+        "_path": "site-packages/black/handle_ipynb_magics.py",
+        "path_type": "hardlink",
+        "sha256": "2f59361ec814dd7a82d140896817fdbfe74e0695601ef73144da19f839bfe1c4",
+        "sha256_in_prefix": "2f59361ec814dd7a82d140896817fdbfe74e0695601ef73144da19f839bfe1c4",
+        "size_in_bytes": 13207
+      },
+      {
+        "_path": "site-packages/black/linegen.py",
+        "path_type": "hardlink",
+        "sha256": "55cf9a62ddb5fc93f7a7c0685d94f5cd091041d09c57ca3a66b3848052b80845",
+        "sha256_in_prefix": "55cf9a62ddb5fc93f7a7c0685d94f5cd091041d09c57ca3a66b3848052b80845",
+        "size_in_bytes": 40043
+      },
+      {
+        "_path": "site-packages/black/lines.py",
+        "path_type": "hardlink",
+        "sha256": "cfe15cbff05e80c54b237de3c827dc328c409b77265d5e3da5c083f6548ca40f",
+        "sha256_in_prefix": "cfe15cbff05e80c54b237de3c827dc328c409b77265d5e3da5c083f6548ca40f",
+        "size_in_bytes": 25877
+      },
+      {
+        "_path": "site-packages/black/mode.py",
+        "path_type": "hardlink",
+        "sha256": "a46b2a4a81e54f7b2a9ee9dc5767cf81e27b6ad54e34d82992e54907f586304d",
+        "sha256_in_prefix": "a46b2a4a81e54f7b2a9ee9dc5767cf81e27b6ad54e34d82992e54907f586304d",
+        "size_in_bytes": 3686
+      },
+      {
+        "_path": "site-packages/black/nodes.py",
+        "path_type": "hardlink",
+        "sha256": "c773ba715d672aa7b1af493a06d33de5d051cad5fefc0206e593e5a8f4135823",
+        "sha256_in_prefix": "c773ba715d672aa7b1af493a06d33de5d051cad5fefc0206e593e5a8f4135823",
+        "size_in_bytes": 24085
+      },
+      {
+        "_path": "site-packages/black/numerics.py",
+        "path_type": "hardlink",
+        "sha256": "ce0ee5d7f5ceb4535f7169c4775dac4ec42c8a5004b48de8ed1b7aa2c74ade6e",
+        "sha256_in_prefix": "ce0ee5d7f5ceb4535f7169c4775dac4ec42c8a5004b48de8ed1b7aa2c74ade6e",
+        "size_in_bytes": 1843
+      },
+      {
+        "_path": "site-packages/black/output.py",
+        "path_type": "hardlink",
+        "sha256": "937a836a5f90dd04aaacba3d57750a439d45072cda4c64a08c15b3e7216fc097",
+        "sha256_in_prefix": "937a836a5f90dd04aaacba3d57750a439d45072cda4c64a08c15b3e7216fc097",
+        "size_in_bytes": 3449
+      },
+      {
+        "_path": "site-packages/black/parsing.py",
+        "path_type": "hardlink",
+        "sha256": "92cd5a5c4c69d7d09a56ab09526fbcac5624c2a568da4b8a5f7157082f59ea52",
+        "sha256_in_prefix": "92cd5a5c4c69d7d09a56ab09526fbcac5624c2a568da4b8a5f7157082f59ea52",
+        "size_in_bytes": 8101
+      },
+      {
+        "_path": "site-packages/black/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/black/report.py",
+        "path_type": "hardlink",
+        "sha256": "8aae184bc03f179cc1a7e1f2a21ccd18bd30e4f10926b027394bce83b75dc74b",
+        "sha256_in_prefix": "8aae184bc03f179cc1a7e1f2a21ccd18bd30e4f10926b027394bce83b75dc74b",
+        "size_in_bytes": 3380
+      },
+      {
+        "_path": "site-packages/black/rusty.py",
+        "path_type": "hardlink",
+        "sha256": "24064f3f8b54f14fd6c913107abca043ae59b616f874cd74cafb57f2f8c750ae",
+        "sha256_in_prefix": "24064f3f8b54f14fd6c913107abca043ae59b616f874cd74cafb57f2f8c750ae",
+        "size_in_bytes": 557
+      },
+      {
+        "_path": "site-packages/black/strings.py",
+        "path_type": "hardlink",
+        "sha256": "a5aa978fe558aec014c1213467577e5c95c77964f98f6a513651bf1aaec87623",
+        "sha256_in_prefix": "a5aa978fe558aec014c1213467577e5c95c77964f98f6a513651bf1aaec87623",
+        "size_in_bytes": 7362
+      },
+      {
+        "_path": "site-packages/black/trans.py",
+        "path_type": "hardlink",
+        "sha256": "f9cb529d4c69a732755ec10f759f62386f300278d3a5cad10e1174f4e90da659",
+        "sha256_in_prefix": "f9cb529d4c69a732755ec10f759f62386f300278d3a5cad10e1174f4e90da659",
+        "size_in_bytes": 74625
+      },
+      {
+        "_path": "site-packages/black_primer/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/black_primer/cli.py",
+        "path_type": "hardlink",
+        "sha256": "5ba74658eefeac4629ee466bed1de0e15f6610531e82979a90bf41c56c3da857",
+        "sha256_in_prefix": "5ba74658eefeac4629ee466bed1de0e15f6610531e82979a90bf41c56c3da857",
+        "size_in_bytes": 3595
+      },
+      {
+        "_path": "site-packages/black_primer/lib.py",
+        "path_type": "hardlink",
+        "sha256": "c1ea11b61a5851c3585f04e4539fbfe307c2e5a4b8186c58b790178b182366cb",
+        "sha256_in_prefix": "c1ea11b61a5851c3585f04e4539fbfe307c2e5a4b8186c58b790178b182366cb",
+        "size_in_bytes": 13763
+      },
+      {
+        "_path": "site-packages/black_primer/primer.json",
+        "path_type": "hardlink",
+        "sha256": "848f21503c7ee01b55e9b9506907bab77a49f588184783f31f395f4177663824",
+        "sha256_in_prefix": "848f21503c7ee01b55e9b9506907bab77a49f588184783f31f395f4177663824",
+        "size_in_bytes": 6761
+      },
+      {
+        "_path": "site-packages/blackd/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "1c5b28bca0054c3cb6e1df975c0a68dc4edc6b8028ffd86a84b8ffc644f69f88",
+        "sha256_in_prefix": "1c5b28bca0054c3cb6e1df975c0a68dc4edc6b8028ffd86a84b8ffc644f69f88",
+        "size_in_bytes": 7280
+      },
+      {
+        "_path": "site-packages/blib2to3/Grammar.txt",
+        "path_type": "hardlink",
+        "sha256": "9b61c7f5aaea5fb1d4789e1d6933c43f0710382d4285fa6fc517ce576d91b220",
+        "sha256_in_prefix": "9b61c7f5aaea5fb1d4789e1d6933c43f0710382d4285fa6fc517ce576d91b220",
+        "size_in_bytes": 9692
+      },
+      {
+        "_path": "site-packages/blib2to3/PatternGrammar.txt",
+        "path_type": "hardlink",
+        "sha256": "ee5ba5db3b6722a0e2fbe2560ebc1c883e72328ef9c3b4da1c7c5d1cc649bce3",
+        "sha256_in_prefix": "ee5ba5db3b6722a0e2fbe2560ebc1c883e72328ef9c3b4da1c7c5d1cc649bce3",
+        "size_in_bytes": 793
+      },
+      {
+        "_path": "site-packages/blib2to3/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f7ff302fd49cbfcfc2b3c1c9c891c6bf1d6fc1712bb2ebe5b00a8d64b709411d",
+        "sha256_in_prefix": "f7ff302fd49cbfcfc2b3c1c9c891c6bf1d6fc1712bb2ebe5b00a8d64b709411d",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "site-packages/blib2to3/pgen2/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "858eb0f50533bd3bd16fe32815f77fabfed92ede885070b6cb15827ec66ea500",
+        "sha256_in_prefix": "858eb0f50533bd3bd16fe32815f77fabfed92ede885070b6cb15827ec66ea500",
+        "size_in_bytes": 143
+      },
+      {
+        "_path": "site-packages/blib2to3/pgen2/conv.py",
+        "path_type": "hardlink",
+        "sha256": "0b23f45eca1136f83e68f0587aadcc64a0de89fc14fa99fff259ac6588785607",
+        "sha256_in_prefix": "0b23f45eca1136f83e68f0587aadcc64a0de89fc14fa99fff259ac6588785607",
+        "size_in_bytes": 9616
+      },
+      {
+        "_path": "site-packages/blib2to3/pgen2/driver.py",
+        "path_type": "hardlink",
+        "sha256": "7a35b30524a3b0b7c2b22362f2010db2aa115eaf3af2e555cc09b5470b59f8cd",
+        "sha256_in_prefix": "7a35b30524a3b0b7c2b22362f2010db2aa115eaf3af2e555cc09b5470b59f8cd",
+        "size_in_bytes": 8517
+      },
+      {
+        "_path": "site-packages/blib2to3/pgen2/grammar.py",
+        "path_type": "hardlink",
+        "sha256": "528d95ab87e6cb3fc0492acb66c30361c0b0ffa023af070695e6dd6f36efc3ad",
+        "sha256_in_prefix": "528d95ab87e6cb3fc0492acb66c30361c0b0ffa023af070695e6dd6f36efc3ad",
+        "size_in_bytes": 6714
+      },
+      {
+        "_path": "site-packages/blib2to3/pgen2/literals.py",
+        "path_type": "hardlink",
+        "sha256": "bdbcf0d515f436f013051f7bd56c1136da7af1fb17932e3ea55e1c059d36ffd1",
+        "sha256_in_prefix": "bdbcf0d515f436f013051f7bd56c1136da7af1fb17932e3ea55e1c059d36ffd1",
+        "size_in_bytes": 1628
+      },
+      {
+        "_path": "site-packages/blib2to3/pgen2/parse.py",
+        "path_type": "hardlink",
+        "sha256": "d6a9b1c158952ff0a0d4fe73a9b6e98f462f6fc3f8e7b23686aa4ab3c102e977",
+        "sha256_in_prefix": "d6a9b1c158952ff0a0d4fe73a9b6e98f462f6fc3f8e7b23686aa4ab3c102e977",
+        "size_in_bytes": 9038
+      },
+      {
+        "_path": "site-packages/blib2to3/pgen2/pgen.py",
+        "path_type": "hardlink",
+        "sha256": "c160db57600be5d1edf4868ba5108c432909b1e5d9de6d0ca437bb64fd90e962",
+        "sha256_in_prefix": "c160db57600be5d1edf4868ba5108c432909b1e5d9de6d0ca437bb64fd90e962",
+        "size_in_bytes": 15349
+      },
+      {
+        "_path": "site-packages/blib2to3/pgen2/token.py",
+        "path_type": "hardlink",
+        "sha256": "78365684e36f494346b166331e1801775a484361e554f3fb6a89f44b508bb8a1",
+        "sha256_in_prefix": "78365684e36f494346b166331e1801775a484361e554f3fb6a89f44b508bb8a1",
+        "size_in_bytes": 1919
+      },
+      {
+        "_path": "site-packages/blib2to3/pgen2/tokenize.py",
+        "path_type": "hardlink",
+        "sha256": "2394d074517d6b3bf8e9d1164b70e381b8df7361578944976ad44fe929e287eb",
+        "sha256_in_prefix": "2394d074517d6b3bf8e9d1164b70e381b8df7361578944976ad44fe929e287eb",
+        "size_in_bytes": 22689
+      },
+      {
+        "_path": "site-packages/blib2to3/pygram.py",
+        "path_type": "hardlink",
+        "sha256": "4ddb48fd447cbf8ffa7d2ac16647f15a94d5f8d1e6f69dc09a4fe31398ec7449",
+        "sha256_in_prefix": "4ddb48fd447cbf8ffa7d2ac16647f15a94d5f8d1e6f69dc09a4fe31398ec7449",
+        "size_in_bytes": 4984
+      },
+      {
+        "_path": "site-packages/blib2to3/pytree.py",
+        "path_type": "hardlink",
+        "sha256": "bc53fdd4aad7889d56a060a4c21b5a40e8209df00a72693ecb1199c3cd34d5e5",
+        "sha256_in_prefix": "bc53fdd4aad7889d56a060a4c21b5a40e8209df00a72693ecb1199c3cd34d5e5",
+        "size_in_bytes": 31729
+      },
+      {
+        "_path": "lib/python3.9/site-packages/__pycache__/_black_version.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/__main__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/brackets.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/cache.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/comments.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/concurrency.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/const.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/debug.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/files.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/handle_ipynb_magics.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/linegen.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/lines.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/mode.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/nodes.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/numerics.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/output.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/parsing.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/report.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/rusty.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/strings.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black/__pycache__/trans.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black_primer/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black_primer/__pycache__/cli.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/black_primer/__pycache__/lib.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/blackd/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/blib2to3/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/conv.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/driver.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/grammar.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/literals.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/parse.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/pgen.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/token.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/blib2to3/pgen2/__pycache__/tokenize.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/blib2to3/__pycache__/pygram.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/blib2to3/__pycache__/pytree.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/black",
+        "path_type": "unix_python_entry_point"
+      },
+      {
+        "_path": "bin/black-primer",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "2792e5842487cb64d2290b738e5d60d947c2495e61b13ff68bb8cf3fcdcd231a",
+  "size": 118752,
+  "subdir": "noarch",
+  "timestamp": 1634678212463,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/black-21.9b0-pyhd8ed1ab_1.tar.bz2",
+  "version": "21.9b0"
+}

@@ -1,0 +1,341 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "binaryornot >=0.2.0",
+    "click >=7.0",
+    "future >=0.15.2",
+    "jinja2 >=2.7",
+    "jinja2-time >=0.1.0",
+    "poyo >=0.1.0",
+    "python",
+    "requests >=2.18.0",
+    "whichcraft >=0.4.0"
+  ],
+  "extracted_package_dir": "/home/abigail/miniconda2/pkgs/cookiecutter-1.7.0-py_0",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/cookiecutter-1.7.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/cookiecutter-1.7.0.dist-info/LICENSE",
+    "lib/python3.9/site-packages/cookiecutter-1.7.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/cookiecutter-1.7.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/cookiecutter-1.7.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/cookiecutter-1.7.0.dist-info/entry_points.txt",
+    "lib/python3.9/site-packages/cookiecutter-1.7.0.dist-info/top_level.txt",
+    "lib/python3.9/site-packages/cookiecutter/__init__.py",
+    "lib/python3.9/site-packages/cookiecutter/__main__.py",
+    "lib/python3.9/site-packages/cookiecutter/cli.py",
+    "lib/python3.9/site-packages/cookiecutter/config.py",
+    "lib/python3.9/site-packages/cookiecutter/environment.py",
+    "lib/python3.9/site-packages/cookiecutter/exceptions.py",
+    "lib/python3.9/site-packages/cookiecutter/extensions.py",
+    "lib/python3.9/site-packages/cookiecutter/find.py",
+    "lib/python3.9/site-packages/cookiecutter/generate.py",
+    "lib/python3.9/site-packages/cookiecutter/hooks.py",
+    "lib/python3.9/site-packages/cookiecutter/log.py",
+    "lib/python3.9/site-packages/cookiecutter/main.py",
+    "lib/python3.9/site-packages/cookiecutter/prompt.py",
+    "lib/python3.9/site-packages/cookiecutter/replay.py",
+    "lib/python3.9/site-packages/cookiecutter/repository.py",
+    "lib/python3.9/site-packages/cookiecutter/utils.py",
+    "lib/python3.9/site-packages/cookiecutter/vcs.py",
+    "lib/python3.9/site-packages/cookiecutter/zipfile.py",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/__main__.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/cli.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/config.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/environment.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/exceptions.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/extensions.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/find.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/generate.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/hooks.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/log.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/main.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/prompt.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/replay.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/repository.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/utils.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/vcs.cpython-39.pyc",
+    "lib/python3.9/site-packages/cookiecutter/__pycache__/zipfile.cpython-39.pyc",
+    "bin/cookiecutter"
+  ],
+  "fn": "cookiecutter-1.7.0-py_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/abigail/miniconda2/pkgs/cookiecutter-1.7.0-py_0",
+    "type": 1
+  },
+  "md5": "7bb4b5aacb55d702aa98ef8d1cb6240d",
+  "name": "cookiecutter",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/abigail/miniconda2/pkgs/cookiecutter-1.7.0-py_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/cookiecutter-1.7.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/cookiecutter-1.7.0.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "7cc392465cc129046da7e088d618be67238e0c1a440e207f494333979f1e60dc",
+        "sha256_in_prefix": "7cc392465cc129046da7e088d618be67238e0c1a440e207f494333979f1e60dc",
+        "size_in_bytes": 1469
+      },
+      {
+        "_path": "site-packages/cookiecutter-1.7.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "67dce208efcc50fcd56edb3a2b6b5e2685a329cc5e95dc5b6725e49e659c2c77",
+        "sha256_in_prefix": "67dce208efcc50fcd56edb3a2b6b5e2685a329cc5e95dc5b6725e49e659c2c77",
+        "size_in_bytes": 37312
+      },
+      {
+        "_path": "site-packages/cookiecutter-1.7.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "6cdb8d6106117075fde84c09484343c9338938a30097f180080b830c51c96d7b",
+        "sha256_in_prefix": "6cdb8d6106117075fde84c09484343c9338938a30097f180080b830c51c96d7b",
+        "size_in_bytes": 2635
+      },
+      {
+        "_path": "site-packages/cookiecutter-1.7.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "f3335865bc10497a01f487d73a33df78dc2f02c00b0237df824dbb16abc259ba",
+        "sha256_in_prefix": "f3335865bc10497a01f487d73a33df78dc2f02c00b0237df824dbb16abc259ba",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/cookiecutter-1.7.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "4ae9215f75a7eb1c733b7ce69b7b6a19767fd70ec0ff1486b3db0fa2e8f6cf19",
+        "sha256_in_prefix": "4ae9215f75a7eb1c733b7ce69b7b6a19767fd70ec0ff1486b3db0fa2e8f6cf19",
+        "size_in_bytes": 61
+      },
+      {
+        "_path": "site-packages/cookiecutter-1.7.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "504d0d1a3e22a8b3600bee42018e15f784eaa7d9800fc1eac2f6691bdcfa7066",
+        "sha256_in_prefix": "504d0d1a3e22a8b3600bee42018e15f784eaa7d9800fc1eac2f6691bdcfa7066",
+        "size_in_bytes": 13
+      },
+      {
+        "_path": "site-packages/cookiecutter/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "75d01b095beb7014d75a6247606f2c1d1a1e7cdc647bf0dcbca95d0434500105",
+        "sha256_in_prefix": "75d01b095beb7014d75a6247606f2c1d1a1e7cdc647bf0dcbca95d0434500105",
+        "size_in_bytes": 85
+      },
+      {
+        "_path": "site-packages/cookiecutter/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "8c9e9d7f634653b3f852b4a7118c581d45545f9cafb5a06d34ef469626a66b1f",
+        "sha256_in_prefix": "8c9e9d7f634653b3f852b4a7118c581d45545f9cafb5a06d34ef469626a66b1f",
+        "size_in_bytes": 246
+      },
+      {
+        "_path": "site-packages/cookiecutter/cli.py",
+        "path_type": "hardlink",
+        "sha256": "22c2ebbeafd69bfbf770a363b597c3263c8e74aaad989f9fbc0b53e231598ecb",
+        "sha256_in_prefix": "22c2ebbeafd69bfbf770a363b597c3263c8e74aaad989f9fbc0b53e231598ecb",
+        "size_in_bytes": 4674
+      },
+      {
+        "_path": "site-packages/cookiecutter/config.py",
+        "path_type": "hardlink",
+        "sha256": "6190c6e46f2b8dffe243568b807802139ab059fb03def224d2940fa66719ccc3",
+        "sha256_in_prefix": "6190c6e46f2b8dffe243568b807802139ab059fb03def224d2940fa66719ccc3",
+        "size_in_bytes": 3973
+      },
+      {
+        "_path": "site-packages/cookiecutter/environment.py",
+        "path_type": "hardlink",
+        "sha256": "d60253087cecbd122edc79ab939d2e66a98205eac62a78fa886b10383363e052",
+        "sha256_in_prefix": "d60253087cecbd122edc79ab939d2e66a98205eac62a78fa886b10383363e052",
+        "size_in_bytes": 2248
+      },
+      {
+        "_path": "site-packages/cookiecutter/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "3bf141b703e9e92495c1823fb57d48b2f69f97c89215fd6538a2bbeb6d510626",
+        "sha256_in_prefix": "3bf141b703e9e92495c1823fb57d48b2f69f97c89215fd6538a2bbeb6d510626",
+        "size_in_bytes": 3925
+      },
+      {
+        "_path": "site-packages/cookiecutter/extensions.py",
+        "path_type": "hardlink",
+        "sha256": "883b68e153bc6c3db6d35449324fc583e368976691336b2c6bd755cd55c56978",
+        "sha256_in_prefix": "883b68e153bc6c3db6d35449324fc583e368976691336b2c6bd755cd55c56978",
+        "size_in_bytes": 500
+      },
+      {
+        "_path": "site-packages/cookiecutter/find.py",
+        "path_type": "hardlink",
+        "sha256": "189f327c7322e0320e796c33f932f3794b041035448a44d9cf31f3aff7b90052",
+        "sha256_in_prefix": "189f327c7322e0320e796c33f932f3794b041035448a44d9cf31f3aff7b90052",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "site-packages/cookiecutter/generate.py",
+        "path_type": "hardlink",
+        "sha256": "eb89c3fa0b4fd14436b51633351deffd8d4fbb4004ea9b5d8ce771af85e436e6",
+        "sha256_in_prefix": "eb89c3fa0b4fd14436b51633351deffd8d4fbb4004ea9b5d8ce771af85e436e6",
+        "size_in_bytes": 13812
+      },
+      {
+        "_path": "site-packages/cookiecutter/hooks.py",
+        "path_type": "hardlink",
+        "sha256": "1393c8a72e012acdd2e7451e5c43d788e695b9645d3a4c612a25e9b43d4384c8",
+        "sha256_in_prefix": "1393c8a72e012acdd2e7451e5c43d788e695b9645d3a4c612a25e9b43d4384c8",
+        "size_in_bytes": 4327
+      },
+      {
+        "_path": "site-packages/cookiecutter/log.py",
+        "path_type": "hardlink",
+        "sha256": "8058c2c061373b63b6ce4461b61491ff9c267a0e0621ebea30568ef602fc5f34",
+        "sha256_in_prefix": "8058c2c061373b63b6ce4461b61491ff9c267a0e0621ebea30568ef602fc5f34",
+        "size_in_bytes": 1596
+      },
+      {
+        "_path": "site-packages/cookiecutter/main.py",
+        "path_type": "hardlink",
+        "sha256": "3d4588999bb19c4eb48f0fca4c4ff011f04e10d9d16d5b5d7a5c2973b5a8b34a",
+        "sha256_in_prefix": "3d4588999bb19c4eb48f0fca4c4ff011f04e10d9d16d5b5d7a5c2973b5a8b34a",
+        "size_in_bytes": 3401
+      },
+      {
+        "_path": "site-packages/cookiecutter/prompt.py",
+        "path_type": "hardlink",
+        "sha256": "d9737103aaf1e8f4acdabca521454de15ae6c05c9d52fd48269506f2c59687e1",
+        "sha256_in_prefix": "d9737103aaf1e8f4acdabca521454de15ae6c05c9d52fd48269506f2c59687e1",
+        "size_in_bytes": 7725
+      },
+      {
+        "_path": "site-packages/cookiecutter/replay.py",
+        "path_type": "hardlink",
+        "sha256": "92cfd20a40b4b69ec8133b92cf1d55a28851844098fc7a54110d1fe0e20b7c3e",
+        "sha256_in_prefix": "92cfd20a40b4b69ec8133b92cf1d55a28851844098fc7a54110d1fe0e20b7c3e",
+        "size_in_bytes": 1558
+      },
+      {
+        "_path": "site-packages/cookiecutter/repository.py",
+        "path_type": "hardlink",
+        "sha256": "7b2674dc87b6c0d1c3aa721bd4ea2c008437b1d59a8da6d54e8ea3e81cbd6603",
+        "sha256_in_prefix": "7b2674dc87b6c0d1c3aa721bd4ea2c008437b1d59a8da6d54e8ea3e81cbd6603",
+        "size_in_bytes": 4060
+      },
+      {
+        "_path": "site-packages/cookiecutter/utils.py",
+        "path_type": "hardlink",
+        "sha256": "c22fa6e84f11a9622ecd2ecda26643f6c7ba711351d3d4ee2e23884ebccdbe82",
+        "sha256_in_prefix": "c22fa6e84f11a9622ecd2ecda26643f6c7ba711351d3d4ee2e23884ebccdbe82",
+        "size_in_bytes": 2748
+      },
+      {
+        "_path": "site-packages/cookiecutter/vcs.py",
+        "path_type": "hardlink",
+        "sha256": "4beaf018c3a01932d2b915945e7133c1076e10ec0c464209b0c42a86892af7d5",
+        "sha256_in_prefix": "4beaf018c3a01932d2b915945e7133c1076e10ec0c464209b0c42a86892af7d5",
+        "size_in_bytes": 3852
+      },
+      {
+        "_path": "site-packages/cookiecutter/zipfile.py",
+        "path_type": "hardlink",
+        "sha256": "cc32076f825a9a3d312e5b5cc2a6d290f5375027883a9c968c6cbc6a7f47a07d",
+        "sha256_in_prefix": "cc32076f825a9a3d312e5b5cc2a6d290f5375027883a9c968c6cbc6a7f47a07d",
+        "size_in_bytes": 4522
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/__main__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/cli.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/config.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/environment.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/exceptions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/extensions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/find.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/generate.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/hooks.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/log.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/main.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/prompt.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/replay.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/repository.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/utils.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/vcs.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/cookiecutter/__pycache__/zipfile.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/cookiecutter",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "c79588496881f2897d4eb68dec3f9e4274a8448b552f66715c964964b8ee3aa5",
+  "size": 85075,
+  "subdir": "noarch",
+  "timestamp": 1577160829327,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/cookiecutter-1.7.0-py_0.tar.bz2",
+  "version": "1.7.0"
+}

@@ -25,13 +25,15 @@ Any changes made from now on (while environment is active) will be made only to 
 Install packages:
 - `conda install biopython==1.79`
 - `conda install cached-property==1.5.2`
-- `conda install cycler==0.10.0`
-- `conda install scipy==1.6.3`
-- `conda install matplotlib==3.4.2`
+- `conda install ipython==7.26.0`
+- `conda install lxml==4.6.3`
+  `conda install matplotlib==3.4.2`
+  `conda install numpy==1.20.3`
 - `conda install pyparsing==2.7.4`
-- `conda install python-dateutil==2.8.2`
-- `conda install six==1.16.0`
-- `conda install pytz==2021.1`
+- `conda install pyzmq==5.9.2`
+- `conda install pyzmq==19.0.2`
+- `conda install scipy==1.6.3`
+- `conda install spyder==5.1.1`
 - `conda install -c conda-forge tqdm`
 - `conda install --channel https://conda.anaconda.org/etetoolkit ete3==3.0.0b35`
 - `conda install -c bioconda weblogo`
@@ -59,8 +61,8 @@ Test the key:
 
 Make folder for repo and move there. Then, initialize git and link to and clone GitHub repo:
 - `git init`
-- `git remote add origin https://github.com/ErillLab/cgb.git`
-- `git clone https://github.com/ErillLab/cgb.git`
+- `git remote add origin https://github.com/ErillLab/cgb3.git`
+- `git clone https://github.com/ErillLab/cgb3.git`
 
 ## Dependencies
 CGB requires three external programs to be installed: BLAST, CLUSTALO and BayesTraits. Optionally, HMMER can also be installed to enable querying of the COG, eggNOG or PFAM databases. The following instructions are for installing these programs on Linux.

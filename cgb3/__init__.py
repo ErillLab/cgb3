@@ -587,6 +587,7 @@ def TestInput(user_input):
     tmp = user_input.taxon_regulation_plot
     tmp = user_input.network_size_plot
     tmp = user_input.site_printout
+    tmp = user_input.colorblind_compatibility
     tmp = user_input.use_up_dist_site_scan
     tmp = user_input.entrez_email
     tmp = user_input.entrez_apikey

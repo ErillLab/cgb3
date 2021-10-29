@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: python-lsp-black
+Version: 1.0.0
+Summary: Black plugin for the Python LSP Server
+Home-page: https://github.com/python-lsp/python-lsp-black
+Author: Python LSP contributors
+Author-email: andfoy@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: python-lsp-server
+Requires-Dist: black (>=19.3b0)
+Requires-Dist: toml
+Provides-Extra: dev
+Requires-Dist: isort (>=5.0) ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+
+# python-lsp-black
+
+[![PyPI](https://img.shields.io/pypi/v/pyls-black.svg)](https://pypi.org/project/python-lsp-black) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+[![Python](https://github.com/python-lsp/python-lsp-black/actions/workflows/python.yml/badge.svg)](https://github.com/python-lsp/python-lsp-black/actions/workflows/python.yml)
+
+
+> [Black](https://github.com/ambv/black) plugin for the [Python LSP Server](https://github.com/python-lsp/python-lsp-server).
+
+In the same `virtualenv` as `python-lsp-server`:
+
+```shell
+pip install python-lsp-black
+```
+
+To avoid unexpected results you should make sure `yapf` and `autopep8` are not installed.
+
+* `python-lsp-black` can either format an entire file or just the selected text.
+* The code will only be formatted if it is syntactically valid Python.
+* Text selections are treated as if they were a separate Python file.
+  Unfortunately this means you can't format an indented block of code.
+* `python-lsp-black` will use your project's [pyproject.toml](https://github.com/ambv/black#pyprojecttoml) if it has one.
+
+

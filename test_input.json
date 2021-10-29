@@ -241,6 +241,7 @@
     "taxon_regulation_plot" : false,
     "network_size_plot" : false,
     "site_printout" : false,
+    "colorblind_compatibility" : true,
     "entrez_email" : "YOUR_EMAIL.EDU",
 	"entrez_apikey" : "YOUR_API_KEY",
 	"sleep" : 1.5,

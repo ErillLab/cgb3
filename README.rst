@@ -2,9 +2,11 @@
 cgb: Comparative genomics of transcriptional regulation in Bacteria
 ===================================================================
 
-``cgb`` is a Python library for comparative genomics of transcriptional
+``cgb3`` is a Python library for comparative genomics of transcriptional
 regulation in Bacteria. This repository contains the core library and the
-graphical interface code for the comparative genomics platform.
+graphical interface code for the comparative genomics platform. This is a
+port of the original cgb program from Python 2.7 into Python 3 and development will proceed
+on this version.
 
 Citation
 --------
@@ -20,7 +22,7 @@ About
 -----
 
 Given binding site evidence from one or more reference organisms, and a set of
-target genomes of interest, ``cgb`` can be used to
+target genomes of interest, ``cgb3`` can be used to
 
 - predict operons in each target genome
 - identify putative binding sites on promoter regions of each target genome
@@ -36,7 +38,7 @@ Getting started
 Python requirements
 ###################
 
-``cgb`` runs on Python 3.9.6 and depends on few packages listed in
+``cgb3`` runs on Python 3.9.6 and depends on few packages listed in
 ``requirements.txt``. All dependencies can be installed using pip:
 
 
@@ -65,7 +67,7 @@ Run
 Input
 -----
 
-``cgb`` expects the input in JSON format. Below is a sample input file followed
+``cgb3`` expects the input in JSON format. Below is a sample input file followed
 by descriptions for each field.
 
 
@@ -148,7 +150,7 @@ Other input parameters are optional.
 Output
 ------
 
-``cgb`` saves all the output in the folder ``output`` created on the working
+``cgb3`` saves all the output in the folder ``output`` created on the working
 directory.
 
 - ``user_PSWM/`` contains the user-provided binding motifs in JASPAR format.

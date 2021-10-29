@@ -1,0 +1,36 @@
+{
+  "build": "hd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "importlib-metadata >=4.8.1,<4.8.2.0a0"
+  ],
+  "extracted_package_dir": "/home/abigail/miniconda2/pkgs/importlib_metadata-4.8.1-hd8ed1ab_0",
+  "features": "",
+  "files": [],
+  "fn": "importlib_metadata-4.8.1-hd8ed1ab_0.tar.bz2",
+  "license": "Apache-2.0",
+  "license_family": "APACHE",
+  "link": {
+    "source": "/home/abigail/miniconda2/pkgs/importlib_metadata-4.8.1-hd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "ce811c521c3a02d7c8ace1cfbd2a0bcd",
+  "name": "importlib_metadata",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/abigail/miniconda2/pkgs/importlib_metadata-4.8.1-hd8ed1ab_0.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "23ef44dca3336e9859320bc3f9b88fca6ea9ae64d932bbfb684f4fc1f308ff82",
+  "size": 3596,
+  "subdir": "noarch",
+  "timestamp": 1630267607675,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/importlib_metadata-4.8.1-hd8ed1ab_0.tar.bz2",
+  "version": "4.8.1"
+}

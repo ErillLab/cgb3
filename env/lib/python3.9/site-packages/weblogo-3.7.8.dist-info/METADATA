@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: weblogo
+Version: 3.7.8
+Summary: WebLogo3 : Sequence Logos Redrawn
+Home-page: https://github.com/WebLogo/weblogo
+Maintainer: Gavin Crooks
+Maintainer-email: gec@threeplusone.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Programming Language :: Python
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: setuptools
+
+
+WebLogo (https://github.com/WebLogo/weblogo) is a tool for creating sequence
+logos from biological sequence alignments.  It can be run on the command line,
+as a standalone webserver, as a CGI webapp, or as a python library.
+
+The main WebLogo webserver is located at http://weblogo.threeplusone.com
+
+Please consult the manual for installation instructions and more information:
+./weblogo/htdocs/manual.html
+
+(Also located at http://weblogo.threeplusone.com/manual.html.)
+
+

@@ -1,0 +1,134 @@
+{
+  "build": "py_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "chardet",
+    "python"
+  ],
+  "extracted_package_dir": "/home/abigail/miniconda2/pkgs/binaryornot-0.4.4-py_1",
+  "features": "",
+  "files": [
+    "lib/python3.9/site-packages/binaryornot-0.4.4-py2.7.egg-info/PKG-INFO",
+    "lib/python3.9/site-packages/binaryornot-0.4.4-py2.7.egg-info/SOURCES.txt",
+    "lib/python3.9/site-packages/binaryornot-0.4.4-py2.7.egg-info/dependency_links.txt",
+    "lib/python3.9/site-packages/binaryornot-0.4.4-py2.7.egg-info/installed-files.txt",
+    "lib/python3.9/site-packages/binaryornot-0.4.4-py2.7.egg-info/not-zip-safe",
+    "lib/python3.9/site-packages/binaryornot-0.4.4-py2.7.egg-info/requires.txt",
+    "lib/python3.9/site-packages/binaryornot-0.4.4-py2.7.egg-info/top_level.txt",
+    "lib/python3.9/site-packages/binaryornot/__init__.py",
+    "lib/python3.9/site-packages/binaryornot/check.py",
+    "lib/python3.9/site-packages/binaryornot/helpers.py",
+    "lib/python3.9/site-packages/binaryornot/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/binaryornot/__pycache__/check.cpython-39.pyc",
+    "lib/python3.9/site-packages/binaryornot/__pycache__/helpers.cpython-39.pyc"
+  ],
+  "fn": "binaryornot-0.4.4-py_1.tar.bz2",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/abigail/miniconda2/pkgs/binaryornot-0.4.4-py_1",
+    "type": 1
+  },
+  "md5": "a556fa60840fcb9dd739d186bfd252f7",
+  "name": "binaryornot",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/abigail/miniconda2/pkgs/binaryornot-0.4.4-py_1.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/binaryornot-0.4.4-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "0693ecd1ce95c0d7e388dc5e066e52fed6e0892f55a2387306a101d08d8e6a86",
+        "sha256_in_prefix": "0693ecd1ce95c0d7e388dc5e066e52fed6e0892f55a2387306a101d08d8e6a86",
+        "size_in_bytes": 7173
+      },
+      {
+        "_path": "site-packages/binaryornot-0.4.4-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "bbe1de16f501c629b36eb88a34b7b31c12a083eba70c6179876d4bd424e5840b",
+        "sha256_in_prefix": "bbe1de16f501c629b36eb88a34b7b31c12a083eba70c6179876d4bd424e5840b",
+        "size_in_bytes": 2121
+      },
+      {
+        "_path": "site-packages/binaryornot-0.4.4-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "site-packages/binaryornot-0.4.4-py2.7.egg-info/installed-files.txt",
+        "path_type": "hardlink",
+        "sha256": "175e77b3ce445a32cdde2c2173633d9d01bec2ce1e42b91dbb3dcb6dac45a0af",
+        "sha256_in_prefix": "175e77b3ce445a32cdde2c2173633d9d01bec2ce1e42b91dbb3dcb6dac45a0af",
+        "size_in_bytes": 239
+      },
+      {
+        "_path": "site-packages/binaryornot-0.4.4-py2.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "site-packages/binaryornot-0.4.4-py2.7.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "8a036cbc4a9b1dd1c2d094f6373f8a5e8f26e85c86bbed0c94615525906364ee",
+        "sha256_in_prefix": "8a036cbc4a9b1dd1c2d094f6373f8a5e8f26e85c86bbed0c94615525906364ee",
+        "size_in_bytes": 15
+      },
+      {
+        "_path": "site-packages/binaryornot-0.4.4-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "c5293b49c18ffff18887f0f671a25f264d28473829cb2aa35a2a338b9fe7be6b",
+        "sha256_in_prefix": "c5293b49c18ffff18887f0f671a25f264d28473829cb2aa35a2a338b9fe7be6b",
+        "size_in_bytes": 12
+      },
+      {
+        "_path": "site-packages/binaryornot/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "5df4971183488489419ac8940739fc9c3352500fb63f98ac787a3ab03d599721",
+        "sha256_in_prefix": "5df4971183488489419ac8940739fc9c3352500fb63f98ac787a3ab03d599721",
+        "size_in_bytes": 80
+      },
+      {
+        "_path": "site-packages/binaryornot/check.py",
+        "path_type": "hardlink",
+        "sha256": "0e887d81dfc351859d1a927c082326bb803e6ee977fe4577aa79783ac803a75d",
+        "sha256_in_prefix": "0e887d81dfc351859d1a927c082326bb803e6ee977fe4577aa79783ac803a75d",
+        "size_in_bytes": 756
+      },
+      {
+        "_path": "site-packages/binaryornot/helpers.py",
+        "path_type": "hardlink",
+        "sha256": "a7a6838a6552b4f40a65e40d1ca91036779e0fc8df4f8aa99bd842895ffc8d85",
+        "sha256_in_prefix": "a7a6838a6552b4f40a65e40d1ca91036779e0fc8df4f8aa99bd842895ffc8d85",
+        "size_in_bytes": 4737
+      },
+      {
+        "_path": "lib/python3.9/site-packages/binaryornot/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/binaryornot/__pycache__/check.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/binaryornot/__pycache__/helpers.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "8f65c16a9f85285e1f704a26d4c5ced25f46544f5cc20dc8a4aebd7796f8011a",
+  "size": 378445,
+  "subdir": "noarch",
+  "timestamp": 1531097907306,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/binaryornot-0.4.4-py_1.tar.bz2",
+  "version": "0.4.4"
+}

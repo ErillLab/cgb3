@@ -1,0 +1,4 @@
+[console_scripts]
+transformseq = weblogo._transformseq:main
+weblogo = weblogo._cli:main
+

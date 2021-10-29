@@ -1,0 +1,157 @@
+{
+  "build": "h9c3ff4c_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=9.3.0",
+    "libstdcxx-ng >=9.3.0"
+  ],
+  "extracted_package_dir": "/home/abigail/miniconda2/pkgs/expat-2.4.1-h9c3ff4c_0",
+  "features": "",
+  "files": [
+    "bin/xmlwf",
+    "include/expat.h",
+    "include/expat_config.h",
+    "include/expat_external.h",
+    "lib/cmake/expat-2.4.1/expat-config-version.cmake",
+    "lib/cmake/expat-2.4.1/expat-config.cmake",
+    "lib/cmake/expat-2.4.1/expat-noconfig.cmake",
+    "lib/cmake/expat-2.4.1/expat.cmake",
+    "lib/libexpat.a",
+    "lib/libexpat.so",
+    "lib/libexpat.so.1",
+    "lib/libexpat.so.1.8.1",
+    "lib/pkgconfig/expat.pc",
+    "share/doc/expat/AUTHORS",
+    "share/doc/expat/changelog"
+  ],
+  "fn": "expat-2.4.1-h9c3ff4c_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/abigail/miniconda2/pkgs/expat-2.4.1-h9c3ff4c_0",
+    "type": 1
+  },
+  "md5": "16054ef3cb3ec5d8d29d08772662f65d",
+  "name": "expat",
+  "package_tarball_full_path": "/home/abigail/miniconda2/pkgs/expat-2.4.1-h9c3ff4c_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/xmlwf",
+        "path_type": "hardlink",
+        "sha256": "904e4f53256849812d0cb32c673f64d37331380356857e32d68f59141f26eb42",
+        "sha256_in_prefix": "904e4f53256849812d0cb32c673f64d37331380356857e32d68f59141f26eb42",
+        "size_in_bytes": 42768
+      },
+      {
+        "_path": "include/expat.h",
+        "path_type": "hardlink",
+        "sha256": "3ede451508ff14e740e4f384b96830b3604477ae88f64110bf45619c3d90ec1f",
+        "sha256_in_prefix": "3ede451508ff14e740e4f384b96830b3604477ae88f64110bf45619c3d90ec1f",
+        "size_in_bytes": 42636
+      },
+      {
+        "_path": "include/expat_config.h",
+        "path_type": "hardlink",
+        "sha256": "36ce2153e1f429c9da9355f757007a2603e66cb30cd955c3c015e7f3a9148f59",
+        "sha256_in_prefix": "36ce2153e1f429c9da9355f757007a2603e66cb30cd955c3c015e7f3a9148f59",
+        "size_in_bytes": 3836
+      },
+      {
+        "_path": "include/expat_external.h",
+        "path_type": "hardlink",
+        "sha256": "7ca9ed28dd5e08eac425931894fabd4c876db8f4be26f9b9a33c2e4f70a0d6c3",
+        "sha256_in_prefix": "7ca9ed28dd5e08eac425931894fabd4c876db8f4be26f9b9a33c2e4f70a0d6c3",
+        "size_in_bytes": 6029
+      },
+      {
+        "_path": "lib/cmake/expat-2.4.1/expat-config-version.cmake",
+        "path_type": "hardlink",
+        "sha256": "53c13ceca18d9fd40a710022b1e3fd460229c599273da993cedf4e08795f936b",
+        "sha256_in_prefix": "53c13ceca18d9fd40a710022b1e3fd460229c599273da993cedf4e08795f936b",
+        "size_in_bytes": 2742
+      },
+      {
+        "_path": "lib/cmake/expat-2.4.1/expat-config.cmake",
+        "path_type": "hardlink",
+        "sha256": "33708544410c5b5fc7d1a25d1700804719deb4e4cb57358d4d9d2e7328418bcb",
+        "sha256_in_prefix": "33708544410c5b5fc7d1a25d1700804719deb4e4cb57358d4d9d2e7328418bcb",
+        "size_in_bytes": 3637
+      },
+      {
+        "_path": "lib/cmake/expat-2.4.1/expat-noconfig.cmake",
+        "path_type": "hardlink",
+        "sha256": "5fcb7747822ae21de24e2ee2036891f9386739df26b51f51984f29a9b9886c82",
+        "sha256_in_prefix": "5fcb7747822ae21de24e2ee2036891f9386739df26b51f51984f29a9b9886c82",
+        "size_in_bytes": 793
+      },
+      {
+        "_path": "lib/cmake/expat-2.4.1/expat.cmake",
+        "path_type": "hardlink",
+        "sha256": "ace39bedceb7ba04d4b0294cc80f5e23a21658523038225eb07b41d9a60309b6",
+        "sha256_in_prefix": "ace39bedceb7ba04d4b0294cc80f5e23a21658523038225eb07b41d9a60309b6",
+        "size_in_bytes": 3242
+      },
+      {
+        "_path": "lib/libexpat.a",
+        "path_type": "hardlink",
+        "sha256": "5fbc5ae288f8e2803ec9ca7b41de782a59099b455f1e87b1b70b9bb6a9b9d29f",
+        "sha256_in_prefix": "5fbc5ae288f8e2803ec9ca7b41de782a59099b455f1e87b1b70b9bb6a9b9d29f",
+        "size_in_bytes": 407144
+      },
+      {
+        "_path": "lib/libexpat.so",
+        "path_type": "softlink",
+        "sha256": "c187bfedc10264a7725dc5c29df7df56b2ad9844460dfaed0b7bdde6c7d292d0",
+        "size_in_bytes": 201400
+      },
+      {
+        "_path": "lib/libexpat.so.1",
+        "path_type": "softlink",
+        "sha256": "c187bfedc10264a7725dc5c29df7df56b2ad9844460dfaed0b7bdde6c7d292d0",
+        "size_in_bytes": 201400
+      },
+      {
+        "_path": "lib/libexpat.so.1.8.1",
+        "path_type": "hardlink",
+        "sha256": "c187bfedc10264a7725dc5c29df7df56b2ad9844460dfaed0b7bdde6c7d292d0",
+        "sha256_in_prefix": "c187bfedc10264a7725dc5c29df7df56b2ad9844460dfaed0b7bdde6c7d292d0",
+        "size_in_bytes": 201400
+      },
+      {
+        "_path": "lib/pkgconfig/expat.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/expat_1621886059626/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "68346c13488fda26805436bbca427344957b351d9c58987d9e9cf7ec5c9f440a",
+        "sha256_in_prefix": "410a7c1c8fc37ef8fd31fadfee44a871baf540ebb9c0ec7acf8b88977c7308a2",
+        "size_in_bytes": 477
+      },
+      {
+        "_path": "share/doc/expat/AUTHORS",
+        "path_type": "hardlink",
+        "sha256": "59f14371c6b75912cfebb46e6247ee5146766e803a0365b124e5d3011e7d0877",
+        "sha256_in_prefix": "59f14371c6b75912cfebb46e6247ee5146766e803a0365b124e5d3011e7d0877",
+        "size_in_bytes": 142
+      },
+      {
+        "_path": "share/doc/expat/changelog",
+        "path_type": "hardlink",
+        "sha256": "c294889e834c818071f4eadbad74facf33f08f592f91844213f36d1f5678ec0b",
+        "sha256_in_prefix": "c294889e834c818071f4eadbad74facf33f08f592f91844213f36d1f5678ec0b",
+        "size_in_bytes": 49187
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "70ce1bcaddfdc764fb05ea392b47b4228fb4de97d967761efe236854b514e04a",
+  "size": 185870,
+  "subdir": "linux-64",
+  "timestamp": 1621886230543,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/expat-2.4.1-h9c3ff4c_0.tar.bz2",
+  "version": "2.4.1"
+}
