@@ -27,8 +27,13 @@ Install packages:
 - `conda install cached-property==1.5.2`
 - `conda install ipython==7.26.0`
 - `conda install lxml==4.6.3`
+<<<<<<< HEAD
 - `conda install matplotlib==3.4.2`
 - `conda install numpy==1.20.3`
+=======
+  `conda install matplotlib==3.4.2`
+  `conda install numpy==1.20.3`
+>>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
 - `conda install pyparsing==2.7.4`
 - `conda install pyzmq==5.9.2`
 - `conda install pyzmq==19.0.2`

@@ -14,7 +14,10 @@ from . import visualization
 from . import bayestraits_wrapper
 from .my_logger import my_logger
 from .misc import mean
+<<<<<<< HEAD
 from ete3 import Tree
+=======
+>>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
 
 from .hmmer import run_COG_hmmscan, process_COG_hmmscan,\
     run_eggNOG_hmmscan, process_eggNOG_hmmscan, \
@@ -36,7 +39,10 @@ class OrthologousGroup:
     def __init__(self, genes):
         self._genes = genes
         self._genes.sort(key=lambda g: g.operon.regulation_probability, reverse=True)
+<<<<<<< HEAD
         self._weighted_average_prob_regulation = None
+=======
+>>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
         self._COGs = []
         self._NOGs = []
         self._PFAMs = []
@@ -45,10 +51,13 @@ class OrthologousGroup:
     def genes(self):
         """Returns the list of orthologous genes."""
         return self._genes
+<<<<<<< HEAD
     
     @property
     def weighted_average_prob_regulation(self):
         return self._weighted_average_prob_regulation
+=======
+>>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
 
     @property
     def description(self):
@@ -318,6 +327,7 @@ class OrthologousGroup:
         # Store these reconstructed+observed ancestral states into the ortholog
         #group '_regulation_states' field, as a dictionary
         self._regulation_states = all_states
+<<<<<<< HEAD
         
     def assign_weighted_average_prob_regulation(self, ortho, phylogeny, prior_reg, reg_choice):
         "Obtains the pairwise distances for the members of an orthologous group and computes the average"
@@ -365,6 +375,8 @@ class OrthologousGroup:
         else:
             #self._weighted_average_prob_regulation = (sum(pairwise))/comparisons
             self._weighted_average_prob_regulation = (sum(pairwise)/n_choose_two)
+=======
+>>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
 
     @property
     def regulation_states(self):
@@ -479,13 +491,21 @@ def merge_orthologous_groups(groups):
     return merged_grps
 
 
+<<<<<<< HEAD
 def orthologous_grps_to_csv(groups, phylogeny, filename, weight_choice):
+=======
+def orthologous_grps_to_csv(groups, phylogeny, filename):
+>>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
     species = phylogeny.tree.find_elements(terminal=True, order='postorder')
     genome_names = [node.name for node in species]
     with open(filename, 'w') as csvfile:
         csv_writer = csv.writer(csvfile)
         header_row = (['average_probability',
+<<<<<<< HEAD
                        'average_probability_all', 'weighted_probability'
+=======
+                       'average_probability_all',
+>>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
                        'ortholog_group_size', 'description', 'COGs', 'eval', \
                        'NOGs', 'eval', 'PFAMs', 'eval'] +
                       [field for genome_name in genome_names
@@ -506,8 +526,11 @@ def orthologous_grps_to_csv(groups, phylogeny, filename, weight_choice):
             # Average regulation probability (p=0 for absent genes in the grp)
             avg_p_all = mean([g.operon.regulation_probability if g else 0
                               for g in genes])
+<<<<<<< HEAD
             #Weighted regulation probability
             weighted_p = group.weighted_average_prob_regulation
+=======
+>>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
             # Orthologous group size
             grp_size = len([g for g in genes if g])
             #COGs and evalues
@@ -521,7 +544,11 @@ def orthologous_grps_to_csv(groups, phylogeny, filename, weight_choice):
             PFAMes=' | '.join([str(item['eval']) for item in group.PFAMs])
             
             #row start
+<<<<<<< HEAD
             row = [avg_p, avg_p_all, weighted_p, grp_size,group.description,\
+=======
+            row = [avg_p, avg_p_all, grp_size,group.description,\
+>>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
                    COGs,COGes,NOGs,NOGes,PFAMs,PFAMes]
 
             for genome_name in genome_names:
@@ -550,6 +577,7 @@ def orthologous_grps_to_csv(groups, phylogeny, filename, weight_choice):
             csv_rows.append(row)
 
         # Sort rows by average probability
+<<<<<<< HEAD
         if weight_choice:
             csv_rows.sort(key=lambda row: row[2], reverse=True)
         else:
@@ -629,6 +657,11 @@ def orthologous_grps_to_csv(groups, phylogeny, filename, weight_choice):
         csv_rows.sort(key=lambda row: row[2], reverse=True)
         csv_writer.writerows(csv_rows)
         """
+=======
+        csv_rows.sort(key=lambda row: row[1], reverse=True)
+        csv_writer.writerows(csv_rows)
+
+>>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
 
 def ancestral_state_reconstruction(ortho_grps, phylo, user_input):
     """Performs ancestral state reconstruction for all orthologous groups.

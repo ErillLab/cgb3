@@ -428,6 +428,7 @@ def create_orthologous_groups(user_input, regulons, genomes):
     
     return groups
 
+<<<<<<< HEAD
 def write_orthologous_groups(orthologous_grps, genomes, weight_choice):
     """ writes out the list of orthologous groups
     """
@@ -440,6 +441,22 @@ def write_orthologous_groups(orthologous_grps, genomes, weight_choice):
     #Write groups to file
     orthologous_grps_to_csv(orthologous_grps, phylo,
                             os.path.join(OUTPUT_DIR, 'orthologs.csv'), weight_choice)
+=======
+def write_orthologous_groups(orthologous_grps, genomes):
+    """ writes out the list of orthologous groups
+    """
+
+
+    # Create phylogenetic tree of target genomes only.
+    phylo = Phylo([g.TF_instance for g in genomes],
+                  [g.strain_name for g in genomes])
+
+    my_logger.info("Writing out orthologous groups")
+    # Write groups to file
+    orthologous_grps_to_csv(orthologous_grps, phylo,
+                            os.path.join(OUTPUT_DIR, 'orthologs.csv'))
+
+>>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
 
 def create_phylogeny(genomes, proteins, user_input):
     """Creates a phylogeny from the given proteins.
@@ -585,10 +602,14 @@ def TestInput(user_input):
     tmp = user_input.taxon_regulation_plot
     tmp = user_input.network_size_plot
     tmp = user_input.site_printout
+<<<<<<< HEAD
     tmp = user_input.min_size_orthologs
     tmp = user_input.colorblind_compatibility
     tmp = user_input.weighted_average_sorting
     tmp = user_input.use_prior_for_absence
+=======
+    tmp = user_input.colorblind_compatibility
+>>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
     tmp = user_input.use_up_dist_site_scan
     tmp = user_input.entrez_email
     tmp = user_input.entrez_apikey
@@ -735,6 +756,12 @@ def go(input_file):
     # Assign PFAMs
     if user_input.PFAM_search:
         assign_PFAMs_to_orthologous_groups(user_input, ortholog_groups)
+<<<<<<< HEAD
+=======
+        
+    #Write orthologous groups
+    write_orthologous_groups(ortholog_groups, genomes)
+>>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
 
     # Ancestral state reconstruction step
     if user_input.ancestral_state_reconstruction:
@@ -744,6 +771,7 @@ def go(input_file):
     # Create phylogenetic tree of target genomes only
     phylo_target_genomes = Phylo([g.TF_instance for g in genomes],
                                  [g.strain_name for g in genomes])
+<<<<<<< HEAD
    
     # Implement weighted sorting
     if user_input.weighted_average_sorting:
@@ -755,6 +783,8 @@ def go(input_file):
     #Write orthologous groups
     write_orthologous_groups(ortholog_groups, genomes, user_input.weighted_average_sorting)
 
+=======
+>>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
     # Generate plots
     all_plots(phylo_target_genomes, ortholog_groups, genomes,
               directory(OUTPUT_DIR, 'plots'),user_input)
