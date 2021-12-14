@@ -433,7 +433,6 @@ class UserInput:
         except:
             value = True
         return value
-<<<<<<< HEAD
     
     @cached_property
     def colorblind_compatibility(self):
@@ -502,8 +501,6 @@ class UserInput:
         except:
             value = True
         return value
-=======
->>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
 
     @cached_property
     def entrez_email(self):

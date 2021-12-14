@@ -118,7 +118,6 @@ class Phylo:
             lookup[clade.name] = clade
         return lookup
 
-<<<<<<< HEAD
     def tree_distance(self, pa, pb):
         """Finds the phylogenetic distance between two proteins."""
         print("dfgshk.jjjjjjjjfdgsssssssssshjk.........")
@@ -129,12 +128,6 @@ class Phylo:
         print("HEY!")
         print("Clade A is ", clade_a.name)
         print("Clade B is ", clade_b.name)
-=======
-    def distance(self, pa, pb):
-        """Finds the phylogenetic distance between two proteins."""
-        clade_a = self.tree_lookup[pa.accession_number]
-        clade_b = self.tree_lookup[pb.accession_number]
->>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
         return self.tree.distance(clade_a, clade_b)
 
     def draw_ascii(self):
@@ -188,8 +181,4 @@ class Phylo:
         visualization.tree_svg_plot(t, temp_file)
         with open(temp_file) as f:
             contents = f.read()
-<<<<<<< HEAD
         return contents
-=======
-        return contents
->>>>>>> 26423e6e9d1842cc737bcab2b17a6f0e83d1194d
