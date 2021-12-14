@@ -118,10 +118,16 @@ class Phylo:
             lookup[clade.name] = clade
         return lookup
 
-    def distance(self, pa, pb):
+    def tree_distance(self, pa, pb):
         """Finds the phylogenetic distance between two proteins."""
+        print("dfgshk.jjjjjjjjfdgsssssssssshjk.........")
+        
         clade_a = self.tree_lookup[pa.accession_number]
+        print("ACESSION NUMBER", self.tree_lookup[pa.accession_number])
         clade_b = self.tree_lookup[pb.accession_number]
+        print("HEY!")
+        print("Clade A is ", clade_a.name)
+        print("Clade B is ", clade_b.name)
         return self.tree.distance(clade_a, clade_b)
 
     def draw_ascii(self):

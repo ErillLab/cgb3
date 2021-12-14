@@ -14,6 +14,7 @@ from . import visualization
 from . import bayestraits_wrapper
 from .my_logger import my_logger
 from .misc import mean
+from ete3 import Tree
 
 from .hmmer import run_COG_hmmscan, process_COG_hmmscan,\
     run_eggNOG_hmmscan, process_eggNOG_hmmscan, \
@@ -35,6 +36,7 @@ class OrthologousGroup:
     def __init__(self, genes):
         self._genes = genes
         self._genes.sort(key=lambda g: g.operon.regulation_probability, reverse=True)
+        self._weighted_average_prob_regulation = None
         self._COGs = []
         self._NOGs = []
         self._PFAMs = []
@@ -43,6 +45,10 @@ class OrthologousGroup:
     def genes(self):
         """Returns the list of orthologous genes."""
         return self._genes
+    
+    @property
+    def weighted_average_prob_regulation(self):
+        return self._weighted_average_prob_regulation
 
     @property
     def description(self):
@@ -312,6 +318,53 @@ class OrthologousGroup:
         # Store these reconstructed+observed ancestral states into the ortholog
         #group '_regulation_states' field, as a dictionary
         self._regulation_states = all_states
+        
+    def assign_weighted_average_prob_regulation(self, ortho, phylogeny, prior_reg, reg_choice):
+        "Obtains the pairwise distances for the members of an orthologous group and computes the average"
+        pairwise = [] #To store the pairwise distances
+        n = 0 #The number of genes for a species
+        ortho_genes = []         
+       
+        #Get all the genes for each species
+        for node in phylogeny.tree.get_terminals():
+            matching_genes = [g for g in ortho.genes \
+                              if g.genome.strain_name == node.name]
+            if len(matching_genes) > 0:
+                ortho_gene = {}
+                ortho_gene['species'] = node.name
+                ortho_gene['gene'] = matching_genes[0]
+                ortho_gene['prob'] = ortho_gene['gene'].operon.regulation_probability
+                ortho_genes.append(ortho_gene)
+                
+            elif reg_choice:
+                ortho_gene = {}
+                ortho_gene['species'] = node.name
+                ortho_gene['gene'] = 'None'
+                ortho_gene['prob'] = prior_reg
+                ortho_genes.append(ortho_gene)
+            n = n+1
+        
+        i = 0
+        while i < len(ortho_genes):
+            j = i+1
+            while j < len(ortho_genes):
+                pairwise.append(
+                    ((ortho_genes[i]['prob'] + ortho_genes[j]['prob']) *
+                     phylogeny.tree.distance(ortho_genes[i]['species'], ortho_genes[j]['species']))
+                    /2
+                    )
+                j+=1
+            i+=1
+
+        #Compute the average
+        n_choose_two= n * (n - 1)/2
+        
+        if len(pairwise) == 0:
+            print("Len 0:")
+            self._weighted_average_prob_regulation = ortho.genes[0].regulation_probability/n_choose_two
+        else:
+            #self._weighted_average_prob_regulation = (sum(pairwise))/comparisons
+            self._weighted_average_prob_regulation = (sum(pairwise)/n_choose_two)
 
     @property
     def regulation_states(self):
@@ -426,13 +479,13 @@ def merge_orthologous_groups(groups):
     return merged_grps
 
 
-def orthologous_grps_to_csv(groups, phylogeny, filename):
+def orthologous_grps_to_csv(groups, phylogeny, filename, weight_choice):
     species = phylogeny.tree.find_elements(terminal=True, order='postorder')
     genome_names = [node.name for node in species]
     with open(filename, 'w') as csvfile:
         csv_writer = csv.writer(csvfile)
         header_row = (['average_probability',
-                       'average_probability_all',
+                       'average_probability_all', 'weighted_probability'
                        'ortholog_group_size', 'description', 'COGs', 'eval', \
                        'NOGs', 'eval', 'PFAMs', 'eval'] +
                       [field for genome_name in genome_names
@@ -453,6 +506,8 @@ def orthologous_grps_to_csv(groups, phylogeny, filename):
             # Average regulation probability (p=0 for absent genes in the grp)
             avg_p_all = mean([g.operon.regulation_probability if g else 0
                               for g in genes])
+            #Weighted regulation probability
+            weighted_p = group.weighted_average_prob_regulation
             # Orthologous group size
             grp_size = len([g for g in genes if g])
             #COGs and evalues
@@ -466,7 +521,7 @@ def orthologous_grps_to_csv(groups, phylogeny, filename):
             PFAMes=' | '.join([str(item['eval']) for item in group.PFAMs])
             
             #row start
-            row = [avg_p, avg_p_all, grp_size,group.description,\
+            row = [avg_p, avg_p_all, weighted_p, grp_size,group.description,\
                    COGs,COGes,NOGs,NOGes,PFAMs,PFAMes]
 
             for genome_name in genome_names:
@@ -495,9 +550,85 @@ def orthologous_grps_to_csv(groups, phylogeny, filename):
             csv_rows.append(row)
 
         # Sort rows by average probability
-        csv_rows.sort(key=lambda row: row[1], reverse=True)
-        csv_writer.writerows(csv_rows)
+        if weight_choice:
+            csv_rows.sort(key=lambda row: row[2], reverse=True)
+        else:
+            csv_writer.writerows(csv_rows)
 
+    """
+    def weighted_orthologous_grps_to_csv(groups, phylogeny, filename):
+    species = phylogeny.tree.find_elements(terminal=True, order='postorder')
+    genome_names = [node.name for node in species]
+    with open(filename, 'w') as csvfile:
+        csv_writer = csv.writer(csvfile)
+        header_row = (['average_probability',
+                       'average_probability_all', 'weighted_probability'
+                       'ortholog_group_size', 'description', 'COGs', 'eval', \
+                       'NOGs', 'eval', 'PFAMs', 'eval'] +
+                      [field for genome_name in genome_names
+                       for field in ['probability (%s)' % genome_name,
+                                     'locus_tag (%s)' % genome_name,
+                                     'protein_id (%s)' % genome_name,
+                                     'product (%s)' % genome_name,
+                                     'operon id (%s)' % genome_name,
+                                     'paralogs (%s)' % genome_name]])
+        csv_writer.writerow(header_row)
+        csv_rows = []
+        for group in groups:
+            genes = [group.member_from_genome(genome_name)
+                     for genome_name in genome_names]
+            # Average regulation probability
+            avg_p = mean([g.operon.regulation_probability
+                          for g in genes if g])
+            # Average regulation probability (p=0 for absent genes in the grp)
+            avg_p_all = mean([g.operon.regulation_probability if g else 0
+                              for g in genes])
+            weight = group.weighted_average_prob_regulation
+            # Orthologous group size
+            grp_size = len([g for g in genes if g])
+            #COGs and evalues
+            COGs=' | '.join([item['ID'] for item in group.COGs])
+            COGes=' | '.join([str(item['eval']) for item in group.COGs])            
+            #NOGs
+            NOGs=' | '.join([item['ID'] for item in group.NOGs])
+            NOGes=' | '.join([str(item['eval']) for item in group.NOGs])
+            #PFAMs
+            PFAMs=' | '.join([item['ID'] for item in group.PFAMs])
+            PFAMes=' | '.join([str(item['eval']) for item in group.PFAMs])
+            
+            #row start
+            row = [avg_p, avg_p_all, weight, grp_size,group.description,\
+                   COGs,COGes,NOGs,NOGes,PFAMs,PFAMes]
+
+            for genome_name in genome_names:
+                all_genes = group.all_genes_from_genome(genome_name)
+                # Write info on the gene of the genome
+                if all_genes:
+                    gene = all_genes[0]
+                    row.extend(['%.3f' % gene.operon.regulation_probability,
+                                gene.locus_tag,
+                                gene.protein_accession_number \
+                                if gene.is_protein_coding_gene else ' ',
+                                gene.product,
+                                gene.operon.operon_id])
+                else:
+                    row.extend(['', '', '', '', ''])
+                # Write all paralogs into a cell
+                paralogs = [':'.join(('%.3f' % g.operon.regulation_probability,
+                                      g.locus_tag,
+                                      g.protein_accession_number \
+                                      if g.is_protein_coding_gene else ' ',
+                                      g.product,
+                                      str(g.operon.operon_id)))
+                            for g in all_genes[1:]]
+                row.append('|'.join(paralogs))
+
+            csv_rows.append(row)
+
+        # Sort rows by average probability
+        csv_rows.sort(key=lambda row: row[2], reverse=True)
+        csv_writer.writerows(csv_rows)
+        """
 
 def ancestral_state_reconstruction(ortho_grps, phylo, user_input):
     """Performs ancestral state reconstruction for all orthologous groups.

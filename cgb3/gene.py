@@ -249,8 +249,10 @@ class Gene:
                tuple([c.accession_number for c in genome.chromids]))
         
         if key in cache.keys():
+        #if key in list(cache.keys()):
             my_logger.debug("Key found in BLAST cache: %s" % str(key))
         if key not in cache.keys():
+        #if key not in list(cache.keys()):
             my_logger.debug("Key NOT found in BLAST cache: %s" % str(key))
             # Search for reciprocal best BLAST hit
             cache[key] = None

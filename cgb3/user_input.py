@@ -433,6 +433,74 @@ class UserInput:
         except:
             value = True
         return value
+    
+    @cached_property
+    def colorblind_compatibility(self):
+        "Returns the user's preference for colorblind compatibility in plots"    
+        try:
+            value = self._input['colorblind_compatibility']
+            #test value
+            if not(isinstance(value, bool)):
+                my_logger.info("WARNING: "\
+                               "colorblind_compatibility (%s) not "\
+                               "properly defined in input file; "\
+                               "will be reset to %d" %
+                              (str(value), False))
+                value=False
+        except:
+            value = False
+        return value
+    
+    @cached_property
+    def min_size_orthologs(self):
+        "Returns the user's number of orthologous groups to be considered"
+        try:
+            value = self._input['min_size_orthologs']
+            #limit range
+            if value <= 0:
+                my_logger.info("WARNING: "\
+                               "min_size_orthologs (%d) out"\
+                               "of range in input file; will be reset to %d" %
+                              (value, 2))
+                value=2
+        except:
+            value = 2
+        return value
+            
+    @cached_property
+    def weighted_average_sorting(self):
+        "Returns the user's preference for weighted sorting in plots"    
+        try:
+            value = self._input['weighted_average_sorting']
+            #test value
+            if not(isinstance(value, bool)):
+                my_logger.info("WARNING: "\
+                               "weighted_average_sorting (%s) not "\
+                               "properly defined in input file; "\
+                               "will be reset to %d" %
+                              (str(value), True))
+                value=True
+        except:
+            value = True
+        return value
+    
+    @cached_property
+    def use_prior_for_absence(self):
+        "Returns the user's prefernce for using the prior probability of regulation\
+            for weighted average sorting"
+        try:
+            value = self._input['use_prior_for_absence']
+            #test value
+            if not(isinstance(value, bool)):
+                my_logger.info("WARNING: "\
+                               "use_prior_for_absence (%s) not "\
+                               "properly defined in input file; "\
+                               "will be reset to %d" %
+                              (str(value), True))
+                value=True
+        except:
+            value = True
+        return value
 
     @cached_property
     def entrez_email(self):

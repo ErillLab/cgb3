@@ -26,7 +26,10 @@ def reverse_complement(seq):
     Returns:
         string: the reverse complement sequence
     """
+    dna_alphabet = "ACGT"
     return str(Seq(seq).reverse_complement())
+#return str(Seq(seq, dna_alphabet).reverse_complement())
+
 
 def weblogo(seqs, filename):
     """Generates the sequence logo for the given sequences.
@@ -42,3 +45,4 @@ def weblogo(seqs, filename):
                '--errorbars', 'YES'],
               stdout=PIPE, stderr=PIPE, stdin=PIPE, close_fds=True)
     p.communicate(input=fasta.encode())
+    #p.communicate(input=fasta)

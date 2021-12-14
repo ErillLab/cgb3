@@ -35,22 +35,53 @@ def rgb2hex(red, green, blue):
     """
     
     R=int(round(red*255))
-    B=int(round(blue*255))
     G=int(round(green*255))
+    B=int(round(blue*255))
 
     return '#{0:02x}{1:02x}{2:02x}'.format(R,G,B)
 
-def filter_and_sort_orthologous_grps(orthologous_groups, min_size=2):
+def rgb2hex_colorblind(p_notregulation, p_regulation, p_absence):
+    """Converts the given rgb values to hexadecimal color code.
+
+    Assumes that rgb values are positive and sum to 1.
+    
+    Changes the colors to be colorblind compatible
+    """
+    #Yellow, regulation
+    #Blue, no regulation
+    #White, absence
+    
+    R = int(p_regulation * 243 + 12)
+    G = int(p_regulation * 71 + 123)
+    B = int(p_notregulation * 210 + 10)
+
+    if (p_absence == 1):
+        return '#FFFFFF'
+
+    return '#{0:02x}{1:02x}{2:02x}'.format(R,G,B)
+
+def filter_and_sort_orthologous_grps(orthologous_groups, user_input):
+    min_size = user_input.min_size_orthologs
+    #print("Min size is ", min_size)
     orthos = [grp for grp in orthologous_groups if len(grp.genes) >= min_size]
     num_genomes = max(len(grp.genes) for grp in orthos)
     # Sort by average regulation probability
-    sort_fn = lambda grp: (sum(g.regulation_probability for g in grp.genes) /
+    
+    #If weighted_average_prob_regulation has been selected, use those weights
+    if user_input.weighted_average_sorting:
+        sort_fn = lambda grp: (float(grp.weighted_average_prob_regulation / float(num_genomes)))
+    
+    #If weighted_average_prob_regulations has not been selected
+    else:
+        sort_fn = lambda grp: (sum(g.regulation_probability for g in grp.genes) /
                            num_genomes)
+    
     orthos.sort(key=sort_fn, reverse=True)
+    
+    
     return orthos
 
-
-def heatmap_view(tree, orthologous_groups, save_dir):
+def heatmap_view(tree, orthologous_groups, save_dir, user_input):
     """Generates a heatmap of regulation states in all species."""
     light_tree = copy.deepcopy(tree)  # Tree copy for the light heatmap
     # Heat map settings
@@ -64,7 +95,7 @@ def heatmap_view(tree, orthologous_groups, save_dir):
     rotation = 90
 
     # Sort orthologous groups by the number of regulated genes in each group
-    orthologous_groups = filter_and_sort_orthologous_grps(orthologous_groups)
+    orthologous_groups = filter_and_sort_orthologous_grps(orthologous_groups, user_input)
 
     # For each species and its gene in each orthologous group, draw a rectangle
     for node, light_node in zip(tree.get_leaves(), light_tree.get_leaves()):
@@ -90,8 +121,14 @@ def heatmap_view(tree, orthologous_groups, save_dir):
                 p_absence = 1
 
             # Color of the rectangle is based on probabilities
-            rect_face_bgcolor = rgb2hex(
-                p_notregulation, p_regulation, p_absence)
+            if user_input.colorblind_compatibility:
+                rect_face_bgcolor = rgb2hex_colorblind(
+                    p_notregulation, p_regulation, p_absence)
+            
+            else:
+                rect_face_bgcolor = rgb2hex(
+                    p_notregulation, p_regulation, p_absence)
+            
             rect_face_text = ('%s [%d]' % (gene.locus_tag, gene.operon.operon_id)
                               if gene else '')
             rect_face_label = {'text': rect_face_text,
@@ -286,7 +323,7 @@ def all_plots(phylo, orthologous_groups, genomes, save_dir, user_input):
     # Heat map
     if user_input.heatmap_plot:
         heatmap_view(biopython_to_ete3(phylo.tree), orthologous_groups,
-                     save_dir)
+                     save_dir, user_input)
 
     # Motif phylogeny plot
     if user_input.motif_plot:
@@ -306,3 +343,5 @@ def all_plots(phylo, orthologous_groups, genomes, save_dir, user_input):
     if user_input.network_size_plot:
         network_size_view(
                    biopython_to_ete3(phylo.tree), orthologous_groups,  save_dir)
+    
+    
