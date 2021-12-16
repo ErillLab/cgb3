@@ -5194,3 +5194,11 @@
 ~ INFO     Error for gene CGL_RS04645. Missing protein ID
 ~ INFO     Missing protein ID in cgl genome. Revise your input file
 ~ INFO     Generating plots
+~ INFO     Checking input file
+~ INFO     Setting output directory: output
+~ INFO     Using YOUR_EMAIL.EDU as Entrez email address
+~ INFO     Using YOUR_API_KEY as Entrez API key
+~ INFO     Using 1.500000 as additional delay for NCBI API
+~ INFO     Started: create proteins
+~ INFO     Initializing NP_217236.2.
+~ INFO     Unable to access https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=NP_217236.2&rettype=gb&retmode=text&tool=biopython&email=YOUR_EMAIL.EDU&api_key=YOUR_API_KEY

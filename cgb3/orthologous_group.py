@@ -484,7 +484,7 @@ def orthologous_grps_to_csv(groups, phylogeny, filename, weight_choice):
     with open(filename, 'w') as csvfile:
         csv_writer = csv.writer(csvfile)
         header_row = (['average_probability',
-                       'average_probability_all', 'weighted_probability'
+                       'average_probability_all', 'weighted_probability',
                        'ortholog_group_size', 'description', 'COGs', 'eval', \
                        'NOGs', 'eval', 'PFAMs', 'eval'] +
                       [field for genome_name in genome_names
