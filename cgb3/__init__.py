@@ -17,8 +17,9 @@ from .orthologous_group import orthologous_grps_to_csv
 from .orthologous_group import ancestral_state_reconstruction
 from .orthologous_group import ancestral_states_to_csv
 from .visualization import all_plots
-from .entrez_utils import set_entrez_email, set_entrez_apikey, set_entrez_delay
+from .entrez_utils import set_entrez_email, set_entrez_apikey, set_entrez_delay, set_entrez_retry_number,nucleotide_query,update_genomes_dictionary
 from .hmmer import run_eggNOG_hmmscan, process_eggNOG_hmmscan
+from .alignment import alignSites
 
 
 PICKLE_DIR = directory('pickles')
@@ -568,6 +569,7 @@ def create_output_directory():
 #calls all input methods, setting them to accepted values
 def TestInput(user_input):
     my_logger.info("Checking input file")
+    tmp = user_input.automated_target_genomes_and_alignment_parameters
     tmp = user_input.prior_regulation_probability
     tmp = user_input.posterior_probability_threshold_for_reporting
     tmp = user_input.phylogenetic_weighting
@@ -593,6 +595,7 @@ def TestInput(user_input):
     tmp = user_input.entrez_email
     tmp = user_input.entrez_apikey
     tmp = user_input.sleep
+    tmp = user_input.retry_number
     tmp = user_input.TF_eval
     tmp = user_input.homolog_eval
     tmp = user_input.hmmer_eval
@@ -620,6 +623,31 @@ def TestInput(user_input):
 #for all members of putative regulons, compute orthologs (and paralogs)
 #for (some) regulated genes, compute ancestral state
 #plot out results
+
+    
+def automated_target_genomes_and_alignment(user_input):
+   """
+   The function does 2 things. Automated target genome search and alignment of sites
+   """
+   target_genomes_accessions=user_input.genome_name_and_accessions
+   target_genomes_parameters=user_input.automated_target_genomes_and_alignment_parameters
+   
+   if not target_genomes_accessions:#if there are no genomes in the input JSON
+       genome_list=[]
+       my_logger.info("Missing genomes")
+       my_logger.info("Started: automated target genome search")
+       uid_list,taxonomicGroups,level=nucleotide_query(target_genomes_parameters)
+       for uid,group in zip(uid_list,taxonomicGroups):
+           genome_list.append(update_genomes_dictionary(uid,group,level))
+       user_input.set_genome_input(genome_list)
+      
+   if target_genomes_parameters[6]['site_realignment']:#if the user declared in the JSON that wants realignment of sites
+       sites=user_input.sites_list
+       my_logger.info("Started: global realignment of sites")
+       aligned_sites=alignSites(sites)
+       user_input.set_aligned_sites(aligned_sites)
+
+       
 def go(input_file):
     """The entry-point for the pipeline."""
     # Read user input and configuration from two files
@@ -651,12 +679,27 @@ def go(input_file):
     if user_input.sleep==None:
         my_logger.info("No sleep time provided for NCBI API.")
         user_input.sleep=0
+        set_entrez_delay(0)
 
     else:
         my_logger.info("Using %f as additional delay for NCBI API"
                         % user_input.sleep)
         set_entrez_delay(user_input.sleep)
+        
+    if user_input.retry_number==None:
+        my_logger.info("No number of tries provided for NCBI API. Default value is 2")
+        user_input.retry_number=2
+        set_entrez_retry_number(2)
 
+    else:
+        my_logger.info("Using %i as maximun number of tries to download a genbank file from NCBI"
+                        % user_input.retry_number)
+        set_entrez_retry_number(user_input.retry_number)
+        
+    # Automated genomes search and alignment only if user want to do so
+    automated_target_genomes_and_alignment(user_input)
+    #Creates a updated version of the JSON input file
+    user_input.createJsonUpdated()
     # Create proteins
     proteins = create_proteins(user_input)
 
