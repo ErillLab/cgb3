@@ -17,6 +17,26 @@ class UserInput:
             for k, v in list(json.load(f).items()):
                 self._input[k] = v
 
+    def set_genome_input(self, data):
+        """Changes the value of input genomes"""
+        self._input['genomes']=data
+        
+    def set_aligned_sites(self, sites):
+        """"Changes the value of input motifs"""
+        for m,n in zip(self._input['motifs'],sites):
+            m['sites']=n
+            
+    @property
+    def automated_target_genomes_and_alignment_parameters(self):
+        """Returns the input processing parametes"""
+        p=self._input['input_processing']
+        return p
+    
+    def createJsonUpdated(self):
+        """Creates a new JSON input file"""
+        with open('output/input_updated.json','w',encoding='utf-8') as json_file:
+            json.dump(self._input, json_file,ensure_ascii=False, indent=4,separators=(',', ': '))
+            
     @property
     def genome_name_and_accessions(self):
         """Returns the list of (genome name, accession_numbers) tuples."""
@@ -558,7 +578,26 @@ class UserInput:
             value = 0
         return value
 
-
+    @cached_property
+    def retry_number(self):
+        try:
+            value = self._input['retry_number']
+            if value < 0:
+                my_logger.info("WARNING: "\
+                               "Number of tries (%d) out"\
+                               "of range in input file; will be reset to %d" %
+                              (value, 2))
+                value=2
+            if value > 1000:
+                my_logger.info("WARNING: "\
+                               "Number of tries (%d) out"\
+                               "of range in input file; will be reset to %d" %
+                              (value, 10))
+                value=10
+        except:
+            value = 0
+        return value
+    
     @cached_property
     def TF_eval(self):
         """Returns the e-value used for identifying TF instances in target

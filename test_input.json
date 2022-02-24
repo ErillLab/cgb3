@@ -210,17 +210,29 @@
     ],
 
     "genomes": [
+
+    ],
+    "input_processing": [
         {
-            "name": "ace",
-            "accession_numbers": ["NC_008578.1"]
+            "target_taxID": "76890"
         },
         {
-            "name": "cgl",
-            "accession_numbers": ["NC_003450.3"]
+            "target_rank": "species"
         },
         {
-            "name": "lxy",
-            "accession_numbers": ["NC_006087.1"]
+            "allow_no_rank": false
+        },
+        {
+            "allow_unclassified": false
+        },
+        {
+            "allow_environmental": false
+        },
+        {
+            "min_N50_contig": 4000
+        },
+        {
+            "site_realignment": false
         }
     ],
 
@@ -245,9 +257,10 @@
     "weighted_average_sorting" : true,
     "use_prior_for_absence" : true,
     "min_size_orthologs" : 2,
-    "entrez_email" : "YOUR_EMAIL.EDU",
-    "entrez_apikey" : "YOUR_API_KEY",
-	"sleep" : 1.5,
+    "entrez_email" : "",
+    "entrez_apikey" : "",
+    "sleep" : 1,
+    "retry_number" : 3,
     "TF_eval" : 0.00000000001,
     "homolog_eval" : 0.1,
     "hmmer_eval" : 0.0000001,
