@@ -175,7 +175,7 @@ def nucleotide_query(parameters):
     letUnClassified=parameters[3]['allow_unclassified']
     letEnviormental=parameters[4]['allow_environmental']
     minN50=parameters[5]['min_N50_contig']
-    
+
     descendants,names_descendants=getChildren(taxID, level, letUnClassified, letNoRank, letEnviormental)
     if level =="species":
         for species in tqdm(descendants):
@@ -206,7 +206,7 @@ def nucleotide_query(parameters):
                 output_list.append(best)
             else:
                 my_logger.info("THERE ARE NOT SUITABLE REPRESENTATIVE ASSEMBLIES FOR THE TAXONOMIC GROUP")
-                     
+           
         return output_list,names_descendants,level
     
 def getChildren(TaxId,level="species", letUnClassified=True, letNoRank=True, letEnviormental=True,returnNames=True):
@@ -216,7 +216,7 @@ def getChildren(TaxId,level="species", letUnClassified=True, letNoRank=True, let
     """
     ncbi = NCBITaxa() 
     descendants=ncbi.get_descendant_taxa(TaxId, intermediate_nodes=True)
-    names_descendant=ncbi.translate_to_names(descendants)
+    #names_descendant=ncbi.translate_to_names(descendants)
     ranks_of_descendants=ncbi.get_rank(descendants)
     if checkLevel(level, ranks_of_descendants):
         records=[]
@@ -231,7 +231,8 @@ def getChildren(TaxId,level="species", letUnClassified=True, letNoRank=True, let
                     pass
                 else:
                     records.append(rank)
-        if returnNames:                
+        if returnNames:
+            names_descendant=ncbi.translate_to_names(records)              
             return records,names_descendant
         else:
             return records
@@ -310,13 +311,15 @@ def processMaterRecordAlt(accession_list,master_record):
     for i in range(len(first)):#loop to divide the invariable part from the variable part of the accession number
         if first[i] != last[i]:
             index=i
+    index=index-1
     prefix_accesion=first[:index]#invariable part of the accession number (prefix)
     range_accesions=range(int(first[index:]),int(last[index:])+1)
     #end
     
     for i in range_accesions: #for every number in the range it creates a accession number string
         accession_tmp=str(prefix_accesion)+str(i).zfill(len(str(last[index:])))+"."+str(master_record.annotations['sequence_version'])
-        accession_list.append(accession_tmp)
+        if accession_tmp not in accession_list:
+            accession_list.append(accession_tmp)
     return accession_list   
 
 def download_cache_accessions(accession_list):
@@ -330,7 +333,7 @@ def download_cache_accessions(accession_list):
     for accession in accession_list:
         accession_cache = os.path.join(ENTREZ_DIRECTORY, accession+'.gb')
         if os.path.isfile(accession_cache):#if already in cache
-            new_accession_list.append(accession)
+                new_accession_list.append(accession)
         else:#if not in cache
             i=0
             while i<retry_number:
@@ -343,7 +346,8 @@ def download_cache_accessions(accession_list):
                         else:#if master record
                             tmp_accession_list=download_cache_accessions(processMaterRecordAlt(new_accession_list,nucleotide_ID_object))#recursivity with the accession numbers from the master record
                             for accession in tmp_accession_list:
-                                new_accession_list.append(accession)
+                                if accession not in new_accession_list:
+                                    new_accession_list.append(accession)
                     break
                 except:
                     time.sleep(sleep_time+i)
