@@ -231,6 +231,9 @@
         {
             "min_N50_contig": 4000
         },
+	{
+            "only_refseq": false
+        },
         {
             "site_realignment": false
         }
