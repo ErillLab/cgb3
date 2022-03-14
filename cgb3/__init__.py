@@ -641,7 +641,7 @@ def automated_target_genomes_and_alignment(user_input):
            genome_list.append(update_genomes_dictionary(uid,group,level))
        user_input.set_genome_input(genome_list)
       
-   if target_genomes_parameters[6]['site_realignment']:#if the user declared in the JSON that wants realignment of sites
+   if target_genomes_parameters[7]['site_realignment']:#if the user declared in the JSON that wants realignment of sites
        sites=user_input.sites_list
        my_logger.info("Started: global realignment of sites")
        aligned_sites=alignSites(sites)

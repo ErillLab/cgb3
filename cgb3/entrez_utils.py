@@ -107,7 +107,7 @@ def query_assembly(assembly_ID):
         
     return nucleotide_ID_list
 
-def nucleotide_query_species(species_taxID, minN50):
+def nucleotide_query_species(species_taxID, minN50, onlyRefSeq=False):
     """
     Given a species TaxID obtains the best assembly for that specie based on 4 scores:
         -100 --> representative genome
@@ -136,15 +136,15 @@ def nucleotide_query_species(species_taxID, minN50):
             representative=False   
     #The score is not 100 then we it will search for the best score available   
     if not representative:
-        assembly_ID_object=Entrez.read(Entrez.esearch(db="assembly", term="txid%s[orgn] AND latest_refseq[filter] AND complete_genome[filter]"%species_taxID))
+        assembly_ID_object=Entrez.read(Entrez.esearch(db="assembly", term="txid%s[orgn] AND latest_refseq[filter] AND complete_genome[filter] NOT anomalous[Properties]"%species_taxID))
         assembly_ID=assembly_ID_object["IdList"]
         score=10
-        if assembly_ID==[]:
-            assembly_ID_object=Entrez.read(Entrez.esearch(db="assembly", term="txid%s[orgn] AND complete_genome[filter]"%species_taxID))
+        if assembly_ID==[] and not onlyRefSeq:
+            assembly_ID_object=Entrez.read(Entrez.esearch(db="assembly", term="txid%s[orgn] AND complete_genome[filter] NOT anomalous[Properties]"%species_taxID))
             assembly_ID=assembly_ID_object["IdList"]
             score=1
             if assembly_ID==[]:
-                assembly_ID_object=Entrez.read(Entrez.esearch(db="assembly", term="txid%s[orgn]"%species_taxID,retmax=9999))
+                assembly_ID_object=Entrez.read(Entrez.esearch(db="assembly", term="txid%s[orgn] NOT anomalous[Properties]"%species_taxID,retmax=9999))
                 assembly_ID_list=assembly_ID_object["IdList"]
                 
                 for assembly in assembly_ID_list:
@@ -175,11 +175,12 @@ def nucleotide_query(parameters):
     letUnClassified=parameters[3]['allow_unclassified']
     letEnviormental=parameters[4]['allow_environmental']
     minN50=parameters[5]['min_N50_contig']
+    onlyRefSeq=parameters[6]['only_refseq']
 
     descendants,names_descendants=getChildren(taxID, level, letUnClassified, letNoRank, letEnviormental)
     if level =="species":
         for species in tqdm(descendants):
-            nucleotide_ID_list,score=nucleotide_query_species(species, minN50)
+            nucleotide_ID_list,score=nucleotide_query_species(species, minN50, onlyRefSeq)
             if score!=None:
                 my_logger.info("Species with taxId = %s has an assembly", species)
                 output_list.append(nucleotide_ID_list)
@@ -192,7 +193,7 @@ def nucleotide_query(parameters):
             score_old=0
             species_list=getChildren(descendant, "species", letUnClassified, letNoRank, letEnviormental, return_names_descendants)
             for species in species_list:
-                nucleotide_ID_list,score=nucleotide_query_species(species, minN50)
+                nucleotide_ID_list,score=nucleotide_query_species(species, minN50, onlyRefSeq)
                 if score!=None:
                     if score==100:
                         best=nucleotide_ID_list
