@@ -178,6 +178,7 @@ def nucleotide_query(parameters):
     onlyRefSeq=parameters[6]['only_refseq']
 
     descendants,names_descendants=getChildren(taxID, level, letUnClassified, letNoRank, letEnviormental)
+    descendant_number=0 #Used to control the name of the taxonomic group that represents the genome or assembly when creating the updated input.
     if level =="species":
         for species in tqdm(descendants):
             nucleotide_ID_list,score=nucleotide_query_species(species, minN50, onlyRefSeq)
@@ -186,6 +187,8 @@ def nucleotide_query(parameters):
                 output_list.append(nucleotide_ID_list)
             else:
                 my_logger.info("SPECIES WITH TAXID = %s HAS NOT AN ASSEMBLY", species)
+                del names_descendants[descendant_number]
+            descendant_number=descendant_number+1
         return output_list,names_descendants,level
     else:
         return_names_descendants=False
@@ -207,7 +210,8 @@ def nucleotide_query(parameters):
                 output_list.append(best)
             else:
                 my_logger.info("THERE ARE NOT SUITABLE REPRESENTATIVE ASSEMBLIES FOR THE TAXONOMIC GROUP")
-           
+                del names_descendants[descendant_number]
+            descendant_number=descendant_number+1
         return output_list,names_descendants,level
     
 def getChildren(TaxId,level="species", letUnClassified=True, letNoRank=True, letEnviormental=True,returnNames=True):
