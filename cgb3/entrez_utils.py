@@ -187,7 +187,8 @@ def nucleotide_query(parameters):
                 output_list.append(nucleotide_ID_list)
             else:
                 my_logger.info("SPECIES WITH TAXID = %s HAS NOT AN ASSEMBLY", species)
-                del names_descendants[descendant_number]
+                names_descendants.pop(descendant_number)
+                descendant_number=descendant_number-1
             descendant_number=descendant_number+1
         return output_list,names_descendants,level
     else:
@@ -210,7 +211,8 @@ def nucleotide_query(parameters):
                 output_list.append(best)
             else:
                 my_logger.info("THERE ARE NOT SUITABLE REPRESENTATIVE ASSEMBLIES FOR THE TAXONOMIC GROUP")
-                del names_descendants[descendant_number]
+                names_descendants.pop(descendant_number)
+                descendant_number=descendant_number-1
             descendant_number=descendant_number+1
         return output_list,names_descendants,level
     
