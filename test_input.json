@@ -210,7 +210,9 @@
     ],
 
     "genomes": [
-
+		{"name": "Mtu","accession_numbers": ["NC_000962.3"]},
+		{"name": "Lmo","accession_numbers": ["NC_003210.1"]},
+		{"name": "Bsu","accession_numbers": ["NC_000964.3"]}
     ],
     "input_processing": [
         {
@@ -243,6 +245,7 @@
     "alpha" : 0.00285714285714,
     "promoter_up_distance" : 300,
     "promoter_dw_distance" : 50,
+    "use_up_dist_site_scan" : false,
     "phylogenetic_weighting": true,
     "site_count_weighting": true,
     "posterior_probability_threshold_for_reporting": 0.975,
@@ -255,12 +258,12 @@
     "gene_regulation_plot" : false,
     "taxon_regulation_plot" : false,
     "network_size_plot" : false,
-    "site_printout" : false,
+    "site_printout" : true,
     "colorblind_compatibility" : true,
     "weighted_average_sorting" : true,
     "use_prior_for_absence" : true,
     "min_size_orthologs" : 2,
-    "entrez_email" : "",
+    "entrez_email" : "YOUR@EMAIL.HERE",
     "entrez_apikey" : "",
     "sleep" : 1,
     "retry_number" : 3,

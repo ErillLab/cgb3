@@ -104,6 +104,11 @@ class PSSMModel(TFBindingModel):
         """Returns the PSSM score for a given sequence for all positions.
 
         The scores from both strands are combined with the soft-max function.
+        When both=True, the function returns only the list of scores.
+        When both=False, the function returns a list of tuples, containing
+        the combined score and a value {1,-1} indicating the strand with the
+        highest score. This is used by genome.identify_sites to report site
+        on highest-scoring strand.
 
         Args:
             seq (string): the sequence to be scored
@@ -127,8 +132,18 @@ class PSSMModel(TFBindingModel):
                 scores[i] = self._calculate(self.pssm, site)
                 rc_scores[i] = self._calculate(self.rev_comp_pssm, site)
 
+        #returns best strand (1 or -1), based on the best score
+        def best_strand(sc,rc_sc):
+            if sc>rc_sc:
+                return 1
+            else:
+                return -1
+            
         if both:
             scores = [log2(2**score + 2**rc_score)
+                      for score, rc_score in zip(scores, rc_scores)]
+        else:
+            scores = [(log2(2**score + 2**rc_score), best_strand(score, rc_score))
                       for score, rc_score in zip(scores, rc_scores)]
 
         return scores

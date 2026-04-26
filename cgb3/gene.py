@@ -293,28 +293,20 @@ class Gene:
     def relative_distance_to_start(self, site_start, site_end):
         """Returns the relative distance of a site to the gene start
            position. This is always the distance from the distal coordinate of
-           the site, since the idea is that the _entire_ site has to be within 
-           whatever up/down limits have been specified and it is given relative
-           to the gene start.
+           the site, given the strand the gene is in.
            A positive distance denotes that the site is downstream of the
            gene start. A negative distance specifies that the site is upstream
            of the gene start.
+           Positive distances are therefore bounded by the user-specified 
+           downstream scanning distance and the length of the site.
         """
         dist=0
         #if gene is in the forward strand
         if self.is_forward_strand:
-            #if site is upstream of gene start
-            if site_start <= self.start:
-                dist = site_start - self.start
-            else:
-                dist = site_end - self.start
+            dist = site_start - self.start
         #gene is in reverse strand
         else:
-            #if site is upstream of gene start
-            if site_end >= self.end:
-                dist = self.end - site_end
-            else:
-                dist = self.end - site_start
+            dist = self.end - site_end
             
         return(dist)
             

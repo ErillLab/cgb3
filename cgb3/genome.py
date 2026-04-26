@@ -429,20 +429,16 @@ class Genome:
             else:
                 start, end = gene.upstream_noncoding_region_location(None,
                                                user_input.promoter_dw_distance)
-            # Score forward strand
+            # Score forward strand with both=False
+            # the returned scores are tuples with score and best_score strand
             seq = gene.chromid.subsequence(start, end)
-            scores = self.TF_binding_model.score_seq(seq, both=False)
-            for i, score in enumerate(scores, start=start):
-                if score >= threshold:
+            scores_w_strand = self.TF_binding_model.score_seq(seq, both=False)
+            for i, score_w_strand in enumerate(scores_w_strand, start=start):
+                if score_w_strand[0] >= threshold:
+                    #append site with strand set to strand with best score
                     sites.append(
-                        Site(gene.chromid, i, i+site_len, 1, score, gene))
-            # Score reverse strand
-            rc_seq = reverse_complement(seq)
-            rc_scores = self.TF_binding_model.score_seq(rc_seq, both=False)
-            for i, score in enumerate(reversed(rc_scores), start=start):
-                if score >= threshold:
-                    sites.append(
-                        Site(gene.chromid, i, i+site_len, -1, score, gene))
+                        Site(gene.chromid, i, i+site_len, score_w_strand[1], score_w_strand[0], gene))
+
 
         # Sort the identified sites by their scores.
         sites.sort(key=lambda site: site.score, reverse=True)

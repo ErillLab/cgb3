@@ -152,6 +152,14 @@ Several parameters control differenet aspects of CGB behavior regarding how it s
     - Rationale:
     	- This parameter controls how far downstream of a gene's  translational start site (TLS)  CGB will scan for putative TF-binding sites.
 
+- `use_up_dist_site_scan`
+	- Type: `boolean`
+	- Allowed values:
+		- `true / false`
+    - Default value: `false`
+    - Rationale:
+    	- This parameter determines whether the promoter_up_distance is used when scanning for sites. If `false` CGB will scan for putative TF-binding sites up the next gene. This only applies to site search (the entered upstream distance setting will be always used for posterior probability determination).
+
 - `phylogenetic_weighting`
 	- Type: `boolean`
 	- Allowed values:
