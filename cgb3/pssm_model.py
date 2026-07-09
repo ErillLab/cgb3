@@ -116,13 +116,20 @@ class PSSMModel(TFBindingModel):
             [float]: list of scores of all positions.
         """
         #seq = Seq(seq, self.alphabet)
+        
         seq = Seq(seq)
-        scores = self.pssm.calculate(seq)
-        rc_scores = self.rev_comp_pssm.calculate(seq)
+
+        #handle the case in which the sequence to be scored is shorter than the motif
+        if self.length > len(seq):
+            scores, rc_scores = [-500.0], [-500.0]
+        else:
+            scores = self.pssm.calculate(seq)
+            rc_scores = self.rev_comp_pssm.calculate(seq)
 
         if self.length == len(seq):
             # Biopython returns single number if len(seq)==len(pssm)
             scores, rc_scores = [scores], [rc_scores]
+            
 
         # Biopython doesn't handle ambiguous bases well. Calculate score for
         # sites with ambiguous letters.
