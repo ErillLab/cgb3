@@ -13,12 +13,13 @@ class Gene:
     and end position, the strand that it is lying on.
     """
 
-    def __init__(self, index, chromid, seq_feature, product_feature=None):
+    def __init__(self, index, chromid, seq_feature, use_old_locus_tags, product_feature=None):
         """Initializes Gene instance with the given Biopython SeqFeature."""
         self._index = index
         self._seq_feature = seq_feature
         self._product_feature = product_feature
         self._chromid = chromid
+        self._use_old_locus_tags = use_old_locus_tags
 
     @cached_property
     def start(self):
@@ -179,9 +180,19 @@ class Gene:
     @cached_property
     def locus_tag(self):
         """Returns the locus tag of the gene."""
-        locus_tags = self._seq_feature.qualifiers['locus_tag']
-        assert len(locus_tags) == 1
-        return locus_tags[0]
+        if self._use_old_locus_tags:
+            if 'old_locus_tag' in self._seq_feature.qualifiers:
+                old_locus_tags = self._seq_feature.qualifiers['old_locus_tag']
+                return old_locus_tags[0]
+            else:
+                locus_tags = self._seq_feature.qualifiers['locus_tag']
+                assert len(locus_tags) == 1
+                return locus_tags[0]
+                
+        else:
+            locus_tags = self._seq_feature.qualifiers['locus_tag']
+            assert len(locus_tags) == 1
+            return locus_tags[0]
 
     @cached_property
     def product_type(self):

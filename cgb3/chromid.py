@@ -29,10 +29,11 @@ class Chromid:
     for more details.
     """
 
-    def __init__(self, accession_number, genome):
+    def __init__(self, accession_number, genome, use_old_locus_tags):
         raw_record = entrez_utils.get_genome_record(accession_number)
         self._record = SeqIO.read(io.StringIO(raw_record), 'gb')
         self._genome = genome
+        self._use_old_locus_tags = use_old_locus_tags
 
     @property
     def genome(self):
@@ -123,7 +124,7 @@ class Chromid:
                     index += 1
                     continue
                     
-                gene_list.append(Gene(index, self, f, product_f))
+                gene_list.append(Gene(index, self, f, self._use_old_locus_tags, product_f))
                 index += 1
         return gene_list
 

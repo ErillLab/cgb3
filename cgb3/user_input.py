@@ -219,6 +219,26 @@ class UserInput:
         return value
 
     @cached_property
+    def use_old_locus_tags(self):
+
+        """Returns True/False, which specifies whether CGB will preferentially use
+        the old locus tag field (if available, in RefSeq chromids) over the locus_tag one.
+        """
+        try:
+            value = self._input['use_old_locus_tags']
+            #test value
+            if not(isinstance(value, bool)):
+                my_logger.info("WARNING: "\
+                               "use_old_locus_tags (%s) not "\
+                               "properly defined in input file; "\
+                               "will be reset to %d" %
+                              (str(value), False))
+                value=False
+        except:
+            value = True
+        return value
+
+    @cached_property
     def ancestral_state_reconstruction(self):
 
         """Returns True/False which specifies whether ancestral state reconstruction

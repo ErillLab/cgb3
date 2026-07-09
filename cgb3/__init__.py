@@ -66,7 +66,7 @@ def create_genomes(user_input):
         raise SystemExit
 
     # Create genomes with given names and accession numbers.
-    genomes = [Genome(name, accessions)
+    genomes = [Genome(name, accessions, user_input.use_old_locus_tags)
                for name, accessions in user_input.genome_name_and_accessions]
     my_logger.info("Finished: create genomes")
     return genomes
